@@ -1,0 +1,100 @@
+.profile-status {
+    padding: 20px;
+    height:45vh;
+    width:280px;
+    margin-top:70px;
+    margin-left:-11px;
+  }
+  
+  .profile-status h5{
+     font-size:small;
+  }
+
+  .concentric-circles {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom:-45px;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent; /* Keep the background transparent */
+  }
+  
+  /* Outer Circle with Red Border */
+  .outer-circle {
+    width: 140px;
+    height: 140px;
+    border: 3px solid #e74c3c; /* Red border for Skilled */
+    z-index: 1;
+  }
+  
+  /* Middle Circle with Green Border */
+  .middle-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #2ecc71; /* Green border for Communication */
+    z-index: 2;
+  }
+  
+  /* Inner Circle with Blue Border */
+  .inner-circle {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #3498db; /* Blue border for Efficiency */
+    z-index: 3;
+  }
+  
+  /* Circle Labels */
+  .circle-labels {
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:6px;
+     
+  }
+  
+  .circle-label p{
+    font-size:small;
+    font-weight:lighter;
+    margin-top:41px;
+  }
+
+  .circle-label1 p{
+    font-size:small;
+    font-weight:lighter;
+    margin-top:23px;
+    margin-left:-3px;
+  }
+
+  .bullet {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .bullet-e{
+    background-color:orange;
+    margin-right:-1px;
+  }
+
+  .bullet-f{
+    background-color:green;
+    margin-left:-6px;
+    margin-bottom:-40px;
+    }
+
+  .bullet-g{
+    background-color:blue;
+    margin-right:-1px;
+  }
+  

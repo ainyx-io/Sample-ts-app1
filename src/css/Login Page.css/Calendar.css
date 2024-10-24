@@ -1,0 +1,68 @@
+/* Card container */
+.schedule-calendar {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between the cards */
+    padding: 10px;
+    margin-top:-27px;
+    gap:8px;
+    /* margin-left:-10px; */
+   }
+  
+  .w{
+    display:grid;
+    grid-template-columns:1fr 0.1fr;
+    margin-top:18px;
+    margin-left:10px;
+  }
+  
+  .IJ{
+    margin-top:60px;
+  }
+  
+  .Dbtn-primary{
+    /* margin-bottom:-16px; */
+    background-color:#3F6AD8;
+    width:77px;
+    color:white;
+    cursor: pointer;
+    font-size: x-small;
+    padding-top:-1px;
+    height:4vh;
+    border-radius:5px;
+    text-align: center;
+    border:none;
+    margin-left:-57px;
+  }
+  
+  
+  /* Individual cards */
+  .Scard {
+    display: flex;
+    flex-direction: column; /* Align content in columns (icon, day, number) */
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center align items vertically */
+    background-color:#f0f4f8;
+    border-radius: 10px;
+    width: 45px; /* Set a fixed width for cards */
+    height: 70px; /* Set a fixed height for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom:-20px;
+  }
+  
+  /* Text styling inside each card */
+  .Scard .day {
+    font-size:small;
+    font-weight: bold;
+  }
+  
+  .Scard .number {
+    font-size: 10px;
+    margin-top: 5px; /* Space between day and number */
+  }
+  
+  /* If you want all cards to take equal width dynamically */
+  .schedule-calendar .card {
+    flex: 1;
+    margin: 0 10px; /* Space between the cards */
+  }
+  

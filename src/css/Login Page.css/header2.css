@@ -1,0 +1,107 @@
+.header2h{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-right:-65px;
+  }
+  
+  .btn-outline-secondary{
+    width: 300px;
+    border:none;
+    font-size: small;
+    color:grey;
+    height:5vh;
+    background-color:white;
+    border-radius:5px;
+    margin-left:-52px;
+    text-align: left;
+  }
+
+  .header2h .v{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+ 
+  .Ebtn-primary{
+    margin-left:210px;
+    margin-bottom:20px;
+    background-color:#3F6AD8;
+    width:77px;
+    color:white;
+    cursor: pointer;
+    font-size: x-small;
+    padding-top:-1px;
+    height:4vh;
+    border-radius:5px;
+    text-align: center;
+    border:none;
+    margin-top:-28px;
+  }
+
+  .v .search-btn{
+    margin-left:-30px;
+
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    width:640px;
+    margin-left:-58px;
+    color:white;
+    height:20vh;
+    background-color: #3F6AD8;
+    padding-left:25px;
+    border-radius:10px;
+    margin-top:-5px;
+    display:grid;
+    grid-template-columns:2.7fr 1.3fr;
+  
+  }
+
+  .btn-success{
+    background-color:white;
+    width:85px;
+    color:black;
+    border-radius:5px;
+    border:none;
+  }
+  
+  .a h4{
+    margin-bottom: 10px;
+    color:white;
+    font-size:large;
+    padding-top: 25px;
+  }
+  
+  .a p {
+    color:white;
+    font-size:x-small;
+    padding-top:-370px;
+    margin-top:-8px;
+  }
+  
+  .b{
+    margin-top:-30px;
+  }
+  .btn-success {
+    background-color: white;
+    width:62px;
+    color: black;
+    cursor: pointer;
+    margin-top: 1px;
+    height:3.4vh;
+    font-size: x-small;
+  }
+  
+  .add-new-btn {
+    background-color:#3F6AD8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  
