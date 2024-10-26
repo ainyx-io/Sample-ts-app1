@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Login Page.css/TrainingParticipants.css';
+import '../css/common/trainingparticipants.css';
 
 // Define the interface for the participants' details
 interface Participant {

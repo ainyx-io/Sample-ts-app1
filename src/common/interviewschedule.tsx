@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Profile Page.css/card2.css';
+import '../css/common/interviewschedule.css';
 
 const InterviewSchedule: React.FC = () => {
     return (

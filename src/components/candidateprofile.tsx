@@ -1,18 +1,23 @@
 import React from 'react';
-import Sidebar from '../Login Page.tsx/left sidebar.tsx';
-import CandidateProfile from './card1.tsx';
-import InterviewSchedule from './card2.tsx';
-import ProfileStatus from './card3.tsx';
-import PreviousExperience from './previous experience.tsx';
-import UserProfile from '../Login Page.tsx/topbarprofile.tsx';
 import { Row, Col, Card } from 'react-bootstrap';
-import '../../css/Profile Page.css/Main Profile.css';
+import '../css/components/candidateprofile.css';
+import Sidebar from '../common/leftsidebar';
+import Profiledata from '../common/profiledata';
+import InterviewSchedule from '../common/interviewschedule';
+import ProfileStatus from '../common/profilestatus';
+import PreviousExperience from '../common/previousexperience';
+import UserProfile from '../common/topbarprofile';
 
-const Candidateprofile: React.FC = () => {
+
+interface CandidateProfileProps {
+  logoutUser: () => void;
+}
+
+const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
   return (
     <div className="app-layout2">
       <aside className="sidebar2">
-        <Sidebar />
+        <Sidebar logoutUser={logoutUser}/>
       </aside>
       <main className="main-content2">
       <UserProfile
@@ -25,7 +30,7 @@ const Candidateprofile: React.FC = () => {
         <Row>
         <Col md={4}>
          <div className='a1'>
-           <CandidateProfile/>
+           <Profiledata/>
         </div>
        </Col>
      <Col md={4}>
@@ -46,4 +51,4 @@ const Candidateprofile: React.FC = () => {
   );
 };
 
-export default Candidateprofile;
+export default CandidateProfile;

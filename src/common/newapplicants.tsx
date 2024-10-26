@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../css/Login Page.css/New Applicants.css';
 import { FaPhone, FaEnvelope } from 'react-icons/fa'; // Icons for phone and message
+import '../css/common/newapplicants.css';
 
 interface Applicant {
   id: number;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import '../../css/Profile Page.css/previous experience.css';
+import '../css/common/previousexperience.css';
 
 const PreviousExperience: React.FC = () => {
     return (

@@ -1,14 +1,18 @@
 import React from 'react'
-import  Sidebar from '../Login Page.tsx/left sidebar.tsx';
-import UserProfile from '../Login Page.tsx/topbarprofile.tsx';
-import Interviewprocess from './Interview table.tsx'
-import '../../css/Interview Process Page.css/InterviewProcess.css';
+import '../css/components/interviewprocess.css';
+import Sidebar from '../common/leftsidebar';
+import UserProfile  from '../common/topbarprofile';
+import InterviewTable from '../common/interviewtable';
 
-const InterviewProcess = () => {
+interface InterviewProcessProps {
+  logoutUser: () => void;
+}
+
+const InterviewProcess : React.FC<InterviewProcessProps> = ({ logoutUser }) => {
   return (
     <div className="app-layout1">
     <aside className="sidebar1">
-       <Sidebar/>
+       <Sidebar logoutUser={logoutUser}/>
     </aside>
      
     <main className="main-content1">
@@ -30,7 +34,7 @@ const InterviewProcess = () => {
               <a className="nav-link" href="#">Completed</a>
             </li>
           </ul>
-          <Interviewprocess/>
+          <InterviewTable/>
         </div>
     </main>
   </div>

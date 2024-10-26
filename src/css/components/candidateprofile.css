@@ -1,0 +1,29 @@
+/* Main layout container */
+.app-layout2{
+    display: grid;
+    grid-template-columns: 220px 1fr; /* Sidebar, Main content, Right sidebar */
+    height: 100vh;
+  }
+  
+  .top-bar {
+    position:fixed; /* or fixed if you want it to stay at the top while scrolling */
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+  }
+  
+  .main-content2{
+    background-color:#e6ebfb; /* Background color for the main content */
+  }
+  
+  .content-sections2{
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  
+  
+  

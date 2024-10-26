@@ -1,10 +1,15 @@
 import React from 'react';
 import { MdDashboard, MdPersonSearch, MdQuestionAnswer, MdAssignment, MdTaskAlt, MdCalendarToday, MdSchool} from 'react-icons/md';
 import { IoMdLogOut } from "react-icons/io";
-import '../../css/Login Page.css/left sidebar.css';
+import '../css/common/leftsidebar.css';
+import PropTypes from 'prop-types';
 
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  logoutUser: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ logoutUser }) => {
   return (
     <div className="sidebarI">
       <h2 className="sidebar-title"><img src="/images/logo.png" alt="Logo"/>Hireism</h2>
@@ -42,7 +47,7 @@ const Sidebar: React.FC = () => {
       </div>
       <div className='logout'>
       <IoMdLogOut className='sidebar-icon8'/>
-        <h6>Logout</h6>
+         <button onClick={logoutUser} className="btn btn-light">Logout</button>
       </div>
     </div>
   );

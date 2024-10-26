@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../css/Profile Page.css/card1.css';
+import '../css/common/profiledata.css';
 
-const CandidateProfile: React.FC = () => {
+const Profiledata: React.FC = () => {
     return (
         <div className="candidate-profile card">
             <img src="/images/mike.png" alt="James Samuel" className="circle-image" />
@@ -24,4 +24,4 @@ const CandidateProfile: React.FC = () => {
     );
 }
 
-export default CandidateProfile;
+export default Profiledata;
