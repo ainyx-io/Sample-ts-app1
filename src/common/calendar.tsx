@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
-import '../../css/Login Page.css/Calendar.css';
+import '../css/common/calendar.css';
 
 const dates = [
   { day: 'Mon', date: 22 },

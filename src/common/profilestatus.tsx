@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Profile Page.css/card3.css';
+import '../css/common/profilestatus.css';
 
 const ProfileStatus: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Login Page.css/RecruitmentProgress.css';
+import '../css/common/recruitmentprogress.css';
 
 // Define the interface for each recruitment row
 interface RecruitmentRow {
