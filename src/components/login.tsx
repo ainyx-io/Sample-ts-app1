@@ -3,32 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/components/login.css';
 import PropTypes from 'prop-types';
 
-// Define the structure of valid credentials
+// Define the structure of credentials
 interface Credentials {
   username: string;
   password: string;
-}
-
-// Hardcoded valid credentials
-const validCredentials: Credentials = {
-  username: 'admin',
-  password: 'admin',
-};
-
-// Simulated API login function
-async function loginUser(credentials: Credentials): Promise<any> {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (
-        credentials.username === validCredentials.username &&
-        credentials.password === validCredentials.password
-      ) {
-        resolve({ token: 'dummy-token' }); // Simulate a successful login
-      } else {
-        reject(new Error('Invalid credentials'));
-      }
-    }, 1000);
-  });
 }
 
 // Props type for LoginPage component
@@ -41,6 +19,28 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
   const [username, setUserName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
+
+  // Simulated API login function
+  const loginUser = async (credentials: Credentials): Promise<any> => {
+    try {
+      const response = await fetch('http://localhost:8080/Login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(credentials),
+      });
+      
+
+      if (!response.ok) {
+        throw new Error('Invalid credentials');
+      }
+
+      const data = await response.json();
+      return data; // Expecting { token: '...' }
+      console.log(data);
+    } catch (error) {
+      throw error;
+    }
+  };
 
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -71,6 +71,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
                     type="text"
                     className="form-control"
                     placeholder="Username or email"
+                    value={username}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)}
                   />
                 </div>
@@ -79,6 +80,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
                     type="password"
                     className="form-control"
                     placeholder="Enter Password"
+                    value={password}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                   />
                 </div>
