@@ -1,0 +1,35 @@
+.previous-experience {
+    padding:5px;
+    width:915px;
+    margin-left:-170px;
+    border-radius:5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0.1, 0.2);
+}
+
+.table2 th, .table2 td{
+    padding:5px; /* Reduce the padding to make the rows smaller */
+    font-size: small;
+    padding-left:15px;
+    padding-top:6px;
+}
+
+.table2 th{
+    color:#5c6fdc;
+}
+
+.table2 td{
+    font-size:10px;
+    color:grey;
+    font-weight:bold;
+}
+
+.AA h4 {
+    font-size:medium;
+    margin-top:290px;
+    margin-left:-170px;
+}
+
+.AA{
+    margin-left:230px;
+    margin-top:-300px;   
+}

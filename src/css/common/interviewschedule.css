@@ -1,0 +1,72 @@
+.interview-schedule {
+    padding: 20px;
+    height:45vh;
+    width:280px;
+    margin-top:70px;
+    margin-left:12px;
+}
+
+.bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .bullet-a{
+     background-color: aqua;
+     margin-left:-16px;
+  }  
+  
+  .bullet-b{
+     background-color: orange;
+     margin-left:-16px;
+  }
+
+  .bullet-c{
+    background-color: blue;
+    margin-left:-16px;
+  }
+
+  .bullet-d{
+    background-color: orangered;
+    margin-left:-16px;
+  }
+
+.interview-schedule .data-and-dates{
+   display:grid;
+   grid-template-columns:1.3fr 1.1fr;
+}
+
+.data ul li{
+    margin-left:-140px;
+    text-align: left;
+    list-style:none;
+    margin-top:-7px;
+}
+
+.dates ul li{
+    list-style:none;
+    margin-top:11px;
+    margin-left:-12px;
+    padding-bottom:10px;
+}
+
+.dates ul li p{
+  font-size:10px;
+  font-weight: bold;
+}
+
+.data ul li span{
+    color: lightseagreen;
+}
+
+
+
+
+.interview-schedule h4 {
+    font-size:small;
+}
+

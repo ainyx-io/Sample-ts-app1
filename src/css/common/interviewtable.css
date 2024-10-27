@@ -1,0 +1,70 @@
+.table1{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0.1, 0.2);
+  width: 800px;
+  margin-top:15px;
+}
+
+.bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.bullet-task {
+  background-color:orange; /* Green for Task */
+}
+
+.bullet-resume {
+  background-color:aquamarine; /* Yellow for Resume Review */
+}
+
+.table1 th, .table1 td {
+  vertical-align: middle;
+  padding:9px; /* Reduce the padding to make the rows smaller */
+  padding-left:30px;
+  padding-top:5px;
+}
+
+
+.table1 tr{
+   height: auto; /* Allow row height to adjust based on content */
+ }
+
+
+.table1 tbody tr td{
+  font-size:small;
+}
+
+.table1 thead th{
+  font-size:small;
+  font-weight:bold;
+  color:#4f5bd5;
+}
+
+.bullet-tech {
+  background-color: #007bff; /* Blue for Tech Interview */
+}
+
+.custom-badge-one{
+  background-color: skyblue; /* Custom background color */
+  color: white; /* Optional: Set the text color */
+  padding: 5px 15px; /* Adjust padding */
+  border-radius: 8px; /* Optional: Customize the border radius */
+  font-size:x-small;
+}
+
+.custom-badge-two{
+  background-color:#4f5bd5; /* Custom background color */
+  color: white; /* Optional: Set the text color */
+  padding: 5px 10px; /* Adjust padding */
+  border-radius: 8px; /* Optional: Customize the border radius */
+  width:90px;
+  font-size:x-small;
+}
+
+

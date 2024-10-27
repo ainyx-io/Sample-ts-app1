@@ -1,0 +1,55 @@
+.candidate-profile {
+    padding: 20px;
+    text-align: center;
+    height:45vh;
+    width:280px;
+    margin-top:70px;
+    margin-left:40px;
+
+}
+
+.circle-image {
+    width: 90px; /* Set the desired width of the image */
+    height: 90px; /* Set the desired height of the image */
+    border-radius: 100%; /* This creates the circular shape */
+    overflow: hidden; /* Ensures that the image stays within the bounds */
+    object-fit: cover; /* Ensures the image fits and maintains aspect ratio */
+    margin-left:80px;
+}
+  
+.things-sidebyside{
+   display:grid;
+   grid-template-columns:0.7fr 1fr;
+   margin-top:18px;
+}
+
+.things-sidebyside .one-thing p{
+    font-size:11px;
+    margin-left:-1px;
+    text-align: left;
+}
+
+.things-sidebyside .second-thing p{
+    font-size:11px;
+    text-align: left;
+}
+
+.candidate-profile .profile-pic {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.candidate-profile h3 {
+    font-size:medium;
+    margin-top: 1px;
+    color: #5c6fdc;;
+}
+
+.candidate-profile p{
+    font-size:8px;
+    margin-top: -8px;
+    font-weight:bold;
+}
+
+
+
