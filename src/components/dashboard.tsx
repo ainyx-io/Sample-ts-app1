@@ -14,11 +14,6 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
-  const participants = [
-    { id: 1, name: 'Mike Tyson', imgUrl:'/images/mike.png', job: 'IOS Developer' },
-    { id: 2, name: 'Samuel John', imgUrl: '/images/Samuel.png', job: 'Android Developer' },
-    { id: 3, name: 'Jiya George', imgUrl: '/images/Jiya.png', job: 'UI/UX Designer' },
-  ];
 
   return (
     <div className="app-layout3">
@@ -49,7 +44,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
         />
         <Calendar />
         <NewApplicants/>
-        <TrainingParticipants participants={participants} />
+        <TrainingParticipants/>
       </aside>
     </div>
   );
