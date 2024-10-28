@@ -3,22 +3,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/components/login.css';
 import PropTypes from 'prop-types';
 
+
 // Define the structure of credentials
 interface Credentials {
   username: string;
   password: string;
 }
 
+
 // Props type for LoginPage component
 interface LoginPageProps {
   setToken: (token: any) => void;
 }
+
 
 // LoginPage functional component
 const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
   const [username, setUserName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
+
 
   // Simulated API login function
   const loginUser = async (credentials: Credentials): Promise<any> => {
@@ -28,11 +32,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials),
       });
-      
+     
+
 
       if (!response.ok) {
         throw new Error('Invalid credentials');
       }
+
 
       const data = await response.json();
       return data; // Expecting { token: '...' }
@@ -41,6 +47,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
       throw error;
     }
   };
+
 
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -52,6 +59,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
       setErrorMessage('Invalid username or password'); // Show error message for invalid login
     }
   };
+
 
   return (
     <div>
@@ -101,9 +109,13 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
   );
 };
 
+
 // Prop types validation
 LoginPage.propTypes = {
   setToken: PropTypes.func.isRequired,
 };
 
+
 export default LoginPage;
+
+

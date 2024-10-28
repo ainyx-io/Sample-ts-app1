@@ -1,5 +1,5 @@
-import React from 'react';
 import '../css/common/hirecandidates.css';
+import React, { useState, useEffect } from 'react';
 
 interface Candidate {
   id: number;
@@ -8,11 +8,23 @@ interface Candidate {
   iconUrl?: string;
 }
 
-interface HireCandidatesProps {
-  candidates: Candidate[];
-}
+const HireCandidates: React.FC = () => {
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
 
-const HireCandidates: React.FC<HireCandidatesProps> = ({ candidates }) => {
+  const fetchCandidates = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/candidates');
+      const data = await response.json();
+      setCandidates(data);
+    } catch (error) {
+      console.error('Error fetching candidates data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCandidates();
+  }, []);
+
   return (
     <div className="IJ">
       <div className="t">
@@ -20,21 +32,21 @@ const HireCandidates: React.FC<HireCandidatesProps> = ({ candidates }) => {
         <button className="Fbtn-primary" type="button">View All</button>
       </div>
       <div className='hire-candidates'>
-      <div className="candidates-list">
-        {candidates.map((candidate) => (
-          <div key={candidate.id} className="candidate-card">
-            <img
-              src={candidate.iconUrl}
-              alt={candidate.role}
-              className="candidate-icon"
-            />
-            <div className="candidate-details">
-              <h5 className="candidate-role">{candidate.role}</h5>
-              <h6 className="candidate-count">{candidate.count} Candidates</h6>
+        <div className="candidates-list">
+          {candidates.map((candidate) => (
+            <div key={candidate.id} className="candidate-card">
+              <img
+                src={candidate.iconUrl}
+                alt={candidate.role}
+                className="candidate-icon"
+              />
+              <div className="candidate-details">
+                <h5 className="candidate-role">{candidate.role}</h5>
+                <h6 className="candidate-count">{candidate.count} Candidates</h6>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );
