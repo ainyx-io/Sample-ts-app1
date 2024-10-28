@@ -14,15 +14,6 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
-  const progressdata = [
-    { id: 1, name: 'John Doe', designation: 'UI/UX Designer', status: 'Tech Interview' },
-    { id: 2, name: 'Sam Emmanuel', designation: 'UI/UX Designer', status: 'Task' },
-    { id: 3, name: 'John Samuel', designation: 'PHP Developer', status: 'Resume Review' },
-    { id: 4, name: 'Sam Emmanuel', designation: 'UI/UX Designer', status: 'Final Interview' },
-    { id: 5, name: 'John Doe', designation: 'Content Designer', status: 'Tech Interview' },
-    { id: 6, name: 'John Samuelee', designation: 'PHP Developer', status: 'Resume Review' },
-  ];
-
   const participants = [
     { id: 1, name: 'Mike Tyson', imgUrl:'/images/mike.png', job: 'IOS Developer' },
     { id: 2, name: 'Samuel John', imgUrl: '/images/Samuel.png', job: 'Android Developer' },
@@ -53,7 +44,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
             <HireCandidates />
           </div>
           <div>
-            <RecruitmentProgress progressdata={progressdata} />
+            <RecruitmentProgress/>
           </div>
         </div>
       </main>
