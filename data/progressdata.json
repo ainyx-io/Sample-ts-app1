@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "designation": "UI/UX Designer",
+        "status": "Tech Interview"
+    },
+    {
+        "id": 2,
+        "name": "Sam Emmanuel",
+        "designation": "UI/UX Designer",
+        "status": "Task"
+    },
+    {
+        "id": 3,
+        "name": "John Samuel",
+        "designation": "PHP Developer",
+        "status": "Resume Review"
+    },
+    {
+        "id": 4,
+        "name": "Sam Emmanuel",
+        "designation": "UI/UX Designer",
+        "status": "Final Interview"
+    },
+    {
+        "id": 5,
+        "name": "John Doe",
+        "designation": "Content Designer",
+        "status": "Tech Interview"
+    },
+    {
+        "id": 6,
+        "name": "John Samuelee",
+        "designation": "PHP Developer",
+        "status": "Resume Review"
+    }
+]

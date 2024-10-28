@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "role": "Content Designer",
+    "count": 5,
+    "iconUrl": "/images/content designer.png"
+  },
+  {
+    "id": 2,
+    "role": "PHP Developer",
+    "count": 8,
+    "iconUrl": "/images/web-programming.png"
+  },
+  {
+    "id": 3,
+    "role": "UI/UX Designer",
+    "count": 5,
+    "iconUrl": "/images/UIUX.png"
+  },
+  {
+    "id": 4,
+    "role": "iOS Developer",
+    "count": 10,
+    "iconUrl": "/images/apple.png"
+  },
+  {
+    "id": 5,
+    "role": "Android Developer",
+    "count": 10,
+    "iconUrl": "/images/developer.png"
+  }
+]
