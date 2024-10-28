@@ -20,15 +20,6 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
     { id: 3, name: 'Jiya George', imgUrl: '/images/Jiya.png', job: 'UI/UX Designer' },
   ];
 
-  const applicants = [
-    { id: 1, name: 'Mike Tyson', designation: 'Applied for:iOS Developer', imgUrl: '/images/mike.png' },
-    { id: 2, name: 'Zara Thomas', designation: 'Applied for:Content Designer', imgUrl: '/images/Zara thomas.png' },
-    { id: 3, name: 'Neenu Abraham', designation: 'Applied for:Content Designer', imgUrl: '/images/Neenu.png' },
-    { id: 4, name: 'John Samuel', designation: 'Applied for:iOS Developer', imgUrl: '/images/John.png' },
-    { id: 5, name: 'Zara Thomas', designation: 'Applied for:Content Designer', imgUrl: '/images/Zara1.png'},
-    { id: 6, name: 'John Samuel', designation: 'Applied for:iOS Developer', imgUrl: '/images/John.png' }
-  ];
-
   return (
     <div className="app-layout3">
       {/* Sidebar */}
@@ -57,7 +48,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           profileImgUrl="https://via.placeholder.com/150"
         />
         <Calendar />
-        <NewApplicants applicants={applicants} />
+        <NewApplicants/>
         <TrainingParticipants participants={participants} />
       </aside>
     </div>
