@@ -10,12 +10,10 @@ interface Credentials {
   password: string;
 }
 
-
 // Props type for LoginPage component
 interface LoginPageProps {
   setToken: (token: any) => void;
 }
-
 
 // LoginPage functional component
 const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
@@ -33,21 +31,17 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
         body: JSON.stringify(credentials),
       });
      
-
-
       if (!response.ok) {
         throw new Error('Invalid credentials');
       }
 
-
       const data = await response.json();
-      return data; // Expecting { token: '...' }
+      return data; 
       console.log(data);
     } catch (error) {
       throw error;
     }
   };
-
 
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -60,8 +54,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
     }
   };
 
-
-  return (
+ return (
     <div>
       <div className="Main">
         <div className="A11">

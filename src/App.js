@@ -7,7 +7,7 @@ import Sidebar from './common/leftsidebar';
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 
-// Redirect component
+//Redirect component
 const RedirectToDashboard = () => {
   return <Navigate to="/Dashboard" replace />;
 };
@@ -42,8 +42,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/Login" Component={LoginPage} />
-          <Route path="/" Component={RedirectToDashboard} />
-          <Route path="/Dashboard" Component={() => <Dashboard logoutUser={logoutUser} />} />
+          <Route path="/" Component={RedirectToDashboard} /> 
+           <Route path="/Dashboard" Component={() => <Dashboard logoutUser={logoutUser} />} />
+          <Route path="/Dashboard" Component={Dashboard} />
           <Route path="/InterviewProcess" Component={InterviewProcess} />
           <Route path="/CandidateProfile" Component={CandidateProfile} />
         </Routes>
