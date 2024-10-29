@@ -18,7 +18,7 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
   return (
     <div className="app-layout2">
       <aside className="sidebar2">
-        <Sidebar logoutUser={logoutUser}/>
+        <Sidebar logoutUser={logoutUser} />
       </aside>
       <main className="main-content2">
       <UserProfile

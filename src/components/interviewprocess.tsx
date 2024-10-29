@@ -12,7 +12,7 @@ const InterviewProcess : React.FC<InterviewProcessProps> = ({ logoutUser }) => {
   return (
     <div className="app-layout1">
     <aside className="sidebar1">
-       <Sidebar logoutUser={logoutUser}/>
+       <Sidebar logoutUser={logoutUser} />
     </aside>
      
     <main className="main-content1">

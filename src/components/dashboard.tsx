@@ -14,12 +14,11 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
-
   return (
     <div className="app-layout3">
-      {/* Sidebar */}
+      {/* Sidebar with logout functionality */}
       <aside className="sidebarJ">
-         <Sidebar logoutUser={logoutUser}/>
+         <Sidebar logoutUser={logoutUser} />
       </aside>
 
       {/* Main content area */}
@@ -30,12 +29,12 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
             <HireCandidates />
           </div>
           <div>
-            <RecruitmentProgress/>
+            <RecruitmentProgress />
           </div>
         </div>
       </main>
 
-       {/* Right Sidebar */}
+      {/* Right Sidebar */}
       <aside className="right-sidebar">
         <UserProfile
           name="Sara Abraham"
@@ -43,8 +42,8 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           profileImgUrl="https://via.placeholder.com/150"
         />
         <Calendar />
-        <NewApplicants/>
-        <TrainingParticipants/>
+        <NewApplicants />
+        <TrainingParticipants />
       </aside>
     </div>
   );
