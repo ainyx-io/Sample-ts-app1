@@ -3,7 +3,7 @@ import '../css/common/profilestatus.css';
 
 const ProfileStatus: React.FC = () => {
   return (
-    <div className="card profile-status">
+    <div className="profile-status-card">
       <h5>Profile Status</h5>
       <div className="concentric-circles">
         <div className="circle outer-circle">

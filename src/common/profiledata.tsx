@@ -3,7 +3,7 @@ import '../css/common/profiledata.css';
 
 const Profiledata: React.FC = () => {
     return (
-        <div className="candidate-profile card">
+        <div className="candidate-profile-card">
             <img src="/images/mike.png" alt="James Samuel" className="circle-image" />
             <h3>James Samuel</h3>
             <p>UI/UX Designer</p>

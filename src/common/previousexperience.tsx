@@ -6,7 +6,7 @@ const PreviousExperience: React.FC = () => {
     return (
        <div className='AA'>
         <h4>Previous Experience</h4>
-        <div className="previous-experience card">
+        <div className="previous-experience-card">
             <Table className='table2'>
                 <thead>
                     <tr>

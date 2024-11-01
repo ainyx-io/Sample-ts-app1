@@ -3,7 +3,7 @@ import '../css/common/interviewschedule.css';
 
 const InterviewSchedule: React.FC = () => {
     return (
-        <div className="interview-schedule card">
+        <div className="interview-schedule-card">
             <h4>Interview Schedule</h4>
             <div className='data-and-dates'>
             <div className='data'>

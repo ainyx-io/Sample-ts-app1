@@ -1,55 +1,43 @@
-.candidate-profile {
+.candidate-profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    text-align: center;
-    height:45vh;
-    width:280px;
-    margin-top:70px;
-    margin-left:40px;
-
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height:33.5vh;
+    width:14vw;
 }
 
-.circle-image {
-    width: 90px; /* Set the desired width of the image */
-    height: 90px; /* Set the desired height of the image */
-    border-radius: 100%; /* This creates the circular shape */
-    overflow: hidden; /* Ensures that the image stays within the bounds */
-    object-fit: cover; /* Ensures the image fits and maintains aspect ratio */
-    margin-left:80px;
-}
-  
-.things-sidebyside{
-   display:grid;
-   grid-template-columns:0.7fr 1fr;
-   margin-top:18px;
-}
-
-.things-sidebyside .one-thing p{
-    font-size:11px;
-    margin-left:-1px;
-    text-align: left;
-}
-
-.things-sidebyside .second-thing p{
-    font-size:11px;
-    text-align: left;
-}
-
-.candidate-profile .profile-pic {
-    width: 100px;
+.candidate-profile-card img.circle-image {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-.candidate-profile h3 {
-    font-size:medium;
-    margin-top: 1px;
-    color: #5c6fdc;;
+.candidate-profile-card h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 5px;
 }
 
-.candidate-profile p{
-    font-size:8px;
-    margin-top: -8px;
-    font-weight:bold;
+.candidate-profile-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 2px 0;
 }
 
+.things-sidebyside {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
 
-
+.one-thing p, .second-thing p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}

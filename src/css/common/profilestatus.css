@@ -1,100 +1,65 @@
-.profile-status {
-    padding: 20px;
-    height:45vh;
-    width:280px;
-    margin-top:70px;
-    margin-left:-11px;
-  }
-  
-  .profile-status h5{
-     font-size:small;
-  }
+.profile-status-card{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  height:33.5vh;
+  width:14vw;
+}
 
-  .concentric-circles {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    margin-bottom:-45px;
-  }
-  
-  .circle {
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent; /* Keep the background transparent */
-  }
-  
-  /* Outer Circle with Red Border */
-  .outer-circle {
-    width: 140px;
-    height: 140px;
-    border: 3px solid #e74c3c; /* Red border for Skilled */
-    z-index: 1;
-  }
-  
-  /* Middle Circle with Green Border */
-  .middle-circle {
-    width: 120px;
-    height: 120px;
-    border: 3px solid #2ecc71; /* Green border for Communication */
-    z-index: 2;
-  }
-  
-  /* Inner Circle with Blue Border */
-  .inner-circle {
-    width: 100px;
-    height: 100px;
-    border: 3px solid #3498db; /* Blue border for Efficiency */
-    z-index: 3;
-  }
-  
-  /* Circle Labels */
-  .circle-labels {
-    margin-top: 20px;
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:6px;
-     
-  }
-  
-  .circle-label p{
-    font-size:small;
-    font-weight:lighter;
-    margin-top:41px;
-  }
+.profile-status-card h5 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
 
-  .circle-label1 p{
-    font-size:small;
-    font-weight:lighter;
-    margin-top:23px;
-    margin-left:-3px;
-  }
+.concentric-circles {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
 
-  .bullet {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
 
-  .bullet-e{
-    background-color:orange;
-    margin-right:-1px;
-  }
+.outer-circle {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #28a745;
+}
 
-  .bullet-f{
-    background-color:green;
-    margin-left:-6px;
-    margin-bottom:-40px;
-    }
+.middle-circle {
+  width: 80%;
+  height: 80%;
+  border: 4px solid #007bff;
+  top: 10%;
+  left: 10%;
+}
 
-  .bullet-g{
-    background-color:blue;
-    margin-right:-1px;
-  }
-  
+.inner-circle {
+  width: 60%;
+  height: 60%;
+  border: 4px solid #ffc107;
+  top: 20%;
+  left: 20%;
+}
+
+.circle-labels {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle-label p {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.bullet-e { background-color: #28a745; }
+.bullet-f { background-color: #007bff; }
+.bullet-g { background-color: #ffc107; }

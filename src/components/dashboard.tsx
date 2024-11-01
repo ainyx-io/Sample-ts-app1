@@ -8,16 +8,19 @@ import UserProfile from '../common/topbarprofile';
 import NewApplicants from '../common/newapplicants';
 import TrainingParticipants from '../common/trainingparticipants';
 import '../css/components/dashboard.css';
+import {Card} from 'react-bootstrap';
 
 interface DashboardProps {
   logoutUser: () => void;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
-  return (
+    return (
+    <div className='whole'>
+    <Card className='main-card1'>
     <div className="app-layout3">
       {/* Sidebar with logout functionality */}
-      <aside className="sidebarJ">
+      <aside className="sidebarK">
          <Sidebar logoutUser={logoutUser} />
       </aside>
 
@@ -45,6 +48,8 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
         <NewApplicants />
         <TrainingParticipants />
       </aside>
+    </div>
+    </Card>
     </div>
   );
 };

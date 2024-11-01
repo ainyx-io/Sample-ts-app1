@@ -2,9 +2,19 @@
 .app-layout2{
     display: grid;
     grid-template-columns: 220px 1fr; /* Sidebar, Main content, Right sidebar */
-    height: 100vh;
-  }
+   }
   
+  .main-card3{
+    height: 73vh; /* Adjusted for flexible scaling */
+    width: 94vw;
+    max-width:72rem;
+    border:2px solid white;
+    border-radius:30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transform-origin:top;
+  }
+
   .top-bar {
     position:fixed; /* or fixed if you want it to stay at the top while scrolling */
     top: 0;
@@ -17,11 +27,15 @@
   
   .main-content2{
     background-color:#e6ebfb; /* Background color for the main content */
+    height:72vh;
   }
   
   .content-sections2{
     border-radius: 8px;
     padding: 20px;
+    display: flex;
+    flex-direction:row;
+    margin-top:80px;
   }
   
   

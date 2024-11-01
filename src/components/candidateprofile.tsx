@@ -16,6 +16,8 @@ interface CandidateProfileProps {
 const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
   
   return (
+    <div className='whole2'>
+    <Card className='main-card3'>
     <div className="app-layout2">
       <aside className="sidebar2">
         <Sidebar logoutUser={logoutUser} />
@@ -48,6 +50,8 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
      </div>
           <PreviousExperience />
       </main>
+      </div>
+    </Card>
       </div>
   );
 };

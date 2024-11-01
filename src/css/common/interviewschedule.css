@@ -1,72 +1,56 @@
-.interview-schedule {
-    padding: 20px;
-    height:45vh;
-    width:280px;
-    margin-top:70px;
-    margin-left:12px;
+.interview-schedule-card{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height:33.5vh;
+  width:14vw;
 }
 
-.bullet {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-
-  .bullet-a{
-     background-color: aqua;
-     margin-left:-16px;
-  }  
-  
-  .bullet-b{
-     background-color: orange;
-     margin-left:-16px;
-  }
-
-  .bullet-c{
-    background-color: blue;
-    margin-left:-16px;
-  }
-
-  .bullet-d{
-    background-color: orangered;
-    margin-left:-16px;
-  }
-
-.interview-schedule .data-and-dates{
-   display:grid;
-   grid-template-columns:1.3fr 1.1fr;
+.interview-schedule-card h4 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.data ul li{
-    margin-left:-140px;
-    text-align: left;
-    list-style:none;
-    margin-top:-7px;
+.data-and-dates {
+  display: flex;
+  flex-direction:row;
 }
 
-.dates ul li{
-    list-style:none;
-    margin-top:11px;
-    margin-left:-12px;
-    padding-bottom:10px;
+.data ul, .dates ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.dates ul li p{
-  font-size:10px;
-  font-weight: bold;
+.data ul li p{
+  font-size:small;
 }
 
-.data ul li span{
-    color: lightseagreen;
+.dates ul li {
+  font-size: small;
+  padding-bottom:3px;
 }
 
-
-
-
-.interview-schedule h4 {
-    font-size:small;
+.data li, .dates li {
+  margin-bottom: 10px;
 }
 
+.data .bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.bullet-a { background-color: #28a745; }
+.bullet-b { background-color: #007bff; }
+.bullet-c { background-color: #ffc107; }
+.bullet-d { background-color: #dc3545; }
+
+.dates p {
+  font-size: 0.9rem;
+  color: #666;
+}

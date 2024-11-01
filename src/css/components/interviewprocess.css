@@ -1,6 +1,19 @@
 .app-layout1{
     display: grid;
     grid-template-columns: 220px 1fr; /* Sidebar, Main content, Right sidebar*/
+    transform: scale(1);
+    transform-origin:top;
+  }
+
+  .main-card2{
+    height: 73vh; /* Adjusted for flexible scaling */
+    width: 94vw;
+    max-width:72rem;
+    border:2px solid white;
+    border-radius:30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transform-origin:top;
   }
   
   .top-bar {
@@ -15,11 +28,31 @@
   
   .main-content1 {
     background-color:#e6ebfb; /* Background color for the main content */
+    height: 72vh;
+    transform: scale(1);
+    transform-origin:top;
+    overflow: hidden;
+  }
+
+  .nav-thing{
+    margin-bottom:10px;
+    transform: scale(1);
+    transform-origin:top;
+  }
+
+  .table-thing{
+    transform: scale(1);
+    transform-origin:top;
+    overflow: hidden;
   }
   
   .content-sections1 {
     border-radius: 8px;
-    padding: 20px;
+    margin-left:38px; 
+    margin-top: 12vh;
+    /* transform: scale(1);
+    transform-origin:top;
+    overflow: hidden; */
   }
     
   .nav-item1{

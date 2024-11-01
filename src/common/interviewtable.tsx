@@ -4,7 +4,7 @@ import '../css/common/interviewtable.css';
 
 const InterviewTable: React.FC = () => {
   return (
-    <table className="table table1">
+       <table className="table table1">
       <thead>
         <tr>
           <th scope="col">Full Name</th>
@@ -76,7 +76,7 @@ const InterviewTable: React.FC = () => {
         </tr>
       </tbody>
     </table>
-  );
+     );
 };
 
 export default InterviewTable;
