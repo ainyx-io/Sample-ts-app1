@@ -10,20 +10,30 @@ interface Participant {
 
 const TrainingParticipants: React.FC = () => {
   const [participants, setParticipants] = useState<Participant[]>([]);
-
-  const fetchParticipants = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/api/participants'); // Replace with your actual endpoint
-      const data = await response.json();
-      setParticipants(data);
-    } catch (error) {
-      console.error('Error fetching participants data:', error);
-    }
-  };
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchParticipants = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/participants');
+        if (!response.ok) {
+          throw new Error('Failed to fetch applicants data');
+        }
+        const data = await response.json();
+        setParticipants(data);
+        setLoading(false);
+      } catch (error: any) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+    
     fetchParticipants();
   }, []);
+
+  if (loading) return <p>Loading participants...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="GH">

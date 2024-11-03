@@ -3,58 +3,54 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/components/login.css';
 import PropTypes from 'prop-types';
 
-
-// Define the structure of credentials
 interface Credentials {
   username: string;
   password: string;
 }
 
-// Props type for LoginPage component
 interface LoginPageProps {
   setToken: (token: any) => void;
 }
 
-// LoginPage functional component
 const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
   const [username, setUserName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
 
-
-  // Simulated API login function
+  // API login function
   const loginUser = async (credentials: Credentials): Promise<any> => {
     try {
-      const response = await fetch('http://localhost:8080/Login', {
+      const response = await fetch('/Login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials),
       });
-     
+
       if (!response.ok) {
-        throw new Error('Invalid credentials');
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Invalid credentials');
       }
 
       const data = await response.json();
-      return data; 
-      console.log(data);
+      return data;
     } catch (error) {
+      console.error('Error during login:', error);
       throw error;
     }
   };
 
-  // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const token = await loginUser({ username, password });
-      setToken(token); // Set token upon successful login
+      setToken(token); // Set token on successful login
+      setErrorMessage(''); // Clear any previous error messages
     } catch (error) {
       setErrorMessage('Invalid username or password'); // Show error message for invalid login
     }
   };
 
- return (
+  return (
     <div>
       <div className="Main">
         <div className="A11">
@@ -102,13 +98,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ setToken }) => {
   );
 };
 
-
-// Prop types validation
 LoginPage.propTypes = {
   setToken: PropTypes.func.isRequired,
 };
 
-
 export default LoginPage;
-
-

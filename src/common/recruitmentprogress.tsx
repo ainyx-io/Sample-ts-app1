@@ -28,20 +28,31 @@ const getStatusColor = (status: string): string => {
 
 const RecruitmentProgress: React.FC = () => {
   const [progressData, setProgressData] = useState<RecruitmentRow[]>([]);
-
-  const fetchProgressData = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/api/progressdata'); // Adjust URL if needed
-      const data = await response.json();
-      setProgressData(data);
-    } catch (error) {
-      console.error('Error fetching recruitment progress data:', error);
-    }
-  };
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchProgressData = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/progressdata');
+        if (!response.ok) {
+          throw new Error('Failed to fetch applicants data');
+        }
+        const data = await response.json();
+        setProgressData(data);
+        setLoading(false);
+      } catch (error: any) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
     fetchProgressData();
   }, []);
+
+  if (loading) return <p>Loading recruitment progress...</p>;
+  if (error) return <p>Error: {error}</p>;
+
 
   return (
     <div className='CD'>

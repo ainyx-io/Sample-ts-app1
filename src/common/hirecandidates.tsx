@@ -10,21 +10,31 @@ interface Candidate {
 
 const HireCandidates: React.FC = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
-
-  const fetchCandidates = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/api/candidates');
-      const data = await response.json();
-      setCandidates(data);
-    } catch (error) {
-      console.error('Error fetching candidates data:', error);
-    }
-  };
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchCandidates = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/candidates');
+        if (!response.ok) {
+          throw new Error('Failed to fetch applicants data');
+        }
+        const data = await response.json();
+        setCandidates(data);
+        setLoading(false);
+      } catch (error: any) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
     fetchCandidates();
   }, []);
 
+  if (loading) return <p>Loading candidates...</p>;
+  if (error) return <p>Error: {error}</p>;
+  
   return (
     <div className="IJ">
       <div className="t">
