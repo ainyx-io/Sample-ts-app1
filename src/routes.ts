@@ -52,6 +52,137 @@ routes.get("/applicants", async (req: Request, res: Response) => {
     }
 });
 
+// ---------------------candidatesapi---------------------
+// Candidates - POST endpoint
+routes.post("/candidates", async (req: Request, res: Response) => {
+    const { candidates } = req.body; // Expect an array of candidates
+
+    if (!Array.isArray(candidates) || candidates.length === 0) {
+         res.status(400).json({ error: "Invalid candidate data" });
+    }
+
+    try {
+        const createdCandidates: any[] = [];
+        for (const candidate of candidates) {
+            if (typeof candidate.role === "string" && candidate.role.trim() !== "" &&
+                typeof candidate.count === "number" && candidate.count > 0 &&
+                typeof candidate.iconUrl === "string" && candidate.iconUrl.trim() !== "") {
+
+                const result = await pool.query(
+                    "INSERT INTO candidates (role, count, iconUrl) VALUES ($1, $2, $3) RETURNING *",
+                    [candidate.role, candidate.count, candidate.iconUrl]
+                );
+                createdCandidates.push(result.rows[0]);
+            } else {
+                console.warn("Skipped invalid candidate data:", candidate);
+            }
+        }
+
+        res.status(201).json(createdCandidates);
+    } catch (error) {
+        console.error("Error adding candidates:", error);
+        res.status(500).json({ error: "Error adding candidates" });
+    }
+});
+
+// Candidates - GET endpoint
+routes.get("/candidates", async (req: Request, res: Response) => {
+    try {
+        const result = await pool.query("SELECT * FROM candidates");
+        res.json(result.rows);
+    } catch (error) {
+        console.error("Error fetching candidates:", error);
+        res.status(500).json({ error: "Error fetching candidates" });
+    }
+});
+
+// -----------------recruitment progress api------------
+// ProgressData - POST endpoint
+routes.post("/progressdata", async (req: Request, res: Response) => {
+    const { progressdata } = req.body; // Expect an array of progress data entries
+
+    if (!Array.isArray(progressdata) || progressdata.length === 0) {
+         res.status(400).json({ error: "Invalid progress data" });
+    }
+
+    try {
+        const createdProgressData: any[] = [];
+        for (const entry of progressdata) {
+            if (typeof entry.name === "string" && entry.name.trim() !== "" &&
+                typeof entry.designation === "string" && entry.designation.trim() !== "" &&
+                typeof entry.status === "string" && entry.status.trim() !== "") {
+
+                const result = await pool.query(
+                    "INSERT INTO progressdata (name, designation, status) VALUES ($1, $2, $3) RETURNING *",
+                    [entry.name, entry.designation, entry.status]
+                );
+                createdProgressData.push(result.rows[0]);
+            } else {
+                console.warn("Skipped invalid progress data:", entry);
+            }
+        }
+
+        res.status(201).json(createdProgressData);
+    } catch (error) {
+        console.error("Error adding progress data:", error);
+        res.status(500).json({ error: "Error adding progress data" });
+    }
+});
+
+// ProgressData - GET endpoint
+routes.get("/progressdata", async (req: Request, res: Response) => {
+    try {
+        const result = await pool.query("SELECT * FROM progressdata");
+        res.json(result.rows);
+    } catch (error) {
+        console.error("Error fetching progress data:", error);
+        res.status(500).json({ error: "Error fetching progress data" });
+    }
+});
+
+// -----------------trainingparticipants-------------
+// Participants - POST endpoint
+routes.post("/participants", async (req: Request, res: Response) => {
+    const { participants } = req.body; // Expect an array of participants
+
+    if (!Array.isArray(participants) || participants.length === 0) {
+         res.status(400).json({ error: "Invalid participant data" });
+    }
+
+    try {
+        const createdParticipants: any[] = [];
+        for (const participant of participants) {
+            if (typeof participant.name === "string" && participant.name.trim() !== "" &&
+                typeof participant.imgUrl === "string" && participant.imgUrl.trim() !== "" &&
+                typeof participant.job === "string" && participant.job.trim() !== "") {
+
+                const result = await pool.query(
+                    "INSERT INTO participants (name, imgUrl, job) VALUES ($1, $2, $3) RETURNING *",
+                    [participant.name, participant.imgUrl, participant.job]
+                );
+                createdParticipants.push(result.rows[0]);
+            } else {
+                console.warn("Skipped invalid participant data:", participant);
+            }
+        }
+
+        res.status(201).json(createdParticipants);
+    } catch (error) {
+        console.error("Error adding participants:", error);
+        res.status(500).json({ error: "Error adding participants" });
+    }
+});
+
+// Participants - GET endpoint
+routes.get("/participants", async (req: Request, res: Response) => {
+    try {
+        const result = await pool.query("SELECT * FROM participants");
+        res.json(result.rows);
+    } catch (error) {
+        console.error("Error fetching participants:", error);
+        res.status(500).json({ error: "Error fetching participants" });
+    }
+});
 
 
 //-----------------all basic codes---------------------------------
