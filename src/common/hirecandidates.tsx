@@ -34,7 +34,7 @@ const HireCandidates: React.FC = () => {
 
   if (loading) return <p>Loading candidates...</p>;
   if (error) return <p>Error: {error}</p>;
-  
+
   return (
     <div className="IJ">
       <div className="t">
@@ -46,7 +46,7 @@ const HireCandidates: React.FC = () => {
           {candidates.map((candidate) => (
             <div key={candidate.id} className="candidate-card">
               <img
-                src={candidate.iconUrl}
+                src={`${process.env.PUBLIC_URL}${candidate.iconUrl}`}
                 alt={candidate.role}
                 className="candidate-icon"
               />

@@ -45,13 +45,13 @@ const NewApplicants: React.FC = () => {
     <div className='new-applicants'>
       <div className="applicants-list">
         {applicants.map((applicant) => (
-          <div key={applicant.id} className="applicant-card">
+              <div key={applicant.id} className="applicant-card">
             <img
               src={applicant.imgUrl}
               alt={applicant.name}
               className="applicant-image"
             />
-            <div className="applicant-details">
+             <div className="applicant-details">
               <h5 className="applicant-name">{applicant.name}</h5>
               <h6 className="applicant-designation">{applicant.designation}</h6>
             </div>
