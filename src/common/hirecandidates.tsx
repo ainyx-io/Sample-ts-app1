@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Login Page.css/HireCandidates.css';
+import '../css/common/hirecandidates.css';
 
 interface Candidate {
   id: number;

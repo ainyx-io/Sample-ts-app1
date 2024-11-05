@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../css/Interview Process Page.css/Interview table.css';
 import {Row,Col,Card} from 'react-bootstrap';
+import '../css/common/interviewtable.css';
 
 const InterviewTable: React.FC = () => {
   return (

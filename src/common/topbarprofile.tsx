@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCog, FaBell } from 'react-icons/fa'; // Icons for settings and notification
-import '../../css/Login Page.css/topbarprofile.css';
+import '../css/common/topbarprofile.css';
 
 // Define the props for type checking
 interface UserProfileProps {

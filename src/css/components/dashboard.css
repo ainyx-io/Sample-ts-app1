@@ -1,0 +1,42 @@
+/* Main layout container */
+.app-layout3{
+    display: grid;
+     grid-template-columns: 220px 750px 250px;/* Sidebar, Main content, Right sidebar */
+     grid-template-rows: auto 1fr; /* Header + Main Content */
+     height: 100vh;
+  }
+  
+  /* Sidebar styling */
+   .sidebarJ{
+    grid-column: 1/ 2; /* Place sidebar in the first column */
+  }
+  
+  /* Main content area */
+  .main-content0{
+    grid-column: 2 / 3; /* Main content in the center */
+    background-color:#e6ebfb;
+  } 
+  
+  /* Content sections like 'You Need to Hire' and 'Recruitment Progress' */
+  .content-sections0{
+    display: flex;
+    flex-direction:column;
+  } 
+  
+  /* Right sidebar styling*/
+  /* .right-sidebar {
+    grid-column: 3 / 4; /* Place right sidebar in the last column */
+    /* background-color:green; */
+  /* } */ 
+  
+  .top-bar .top-right-icons{
+    position:fixed; /* or fixed if you want it to stay at the top while scrolling */
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40px;
+       background-color: #f8f9fa;
+    z-index: 1000;
+  }

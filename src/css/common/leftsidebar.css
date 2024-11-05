@@ -69,9 +69,18 @@
   
   .sidebar-icon8{
     font-size: 20px;
-    color:grey;
+    /* color:grey; */
     margin-left:16px;
     margin-bottom:-310px;
+    }
+
+    .btn-light{
+      font-size: 15px;
+      color:grey;
+      margin-left:9px;
+      margin-bottom:-300px;
+      border:none;
+      height:4vh;
     }
 
     .sidebar h2{

@@ -1,16 +1,19 @@
 import React from 'react'
-import  Sidebar from './left sidebar.tsx'
-import Header from './header2.tsx'
-import HireCandidates from './HireCandidates.tsx'
-import  RecruitmentProgress from './RecruitmentProgress.tsx'
-import UserProfile from './topbarprofile.tsx' 
-import Calendar from './Calendar.tsx'
-import NewApplicants from './New Applicants.tsx'
-import TrainingParticipants from './TrainingParticipants.tsx'
-import '../../css/Login Page.css/login.css';
+import Calendar from '../common/calendar';
+import Sidebar from '../common/leftsidebar';
+import Searchbar from '../common/searchbar';
+import HireCandidates from '../common/hirecandidates';
+import RecruitmentProgress from '../common/recruitmentprogress';
+import UserProfile from '../common/topbarprofile';
+import NewApplicants from '../common/newapplicants';
+import TrainingParticipants from '../common/trainingparticipants';
+import '../css/components/dashboard.css';
 
+interface DashboardProps {
+  logoutUser: () => void;
+}
 
-const Login = () => {
+const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
 
   const candidates = [
     { id: 1, role: 'Content Designer', count: 5, iconUrl: '/images/content designer.png' },
@@ -50,12 +53,12 @@ const Login = () => {
     <div className="app-layout3">
     {/* Sidebar */}
     <aside className="sidebarJ">
-       <Sidebar/>
+       <Sidebar logoutUser={logoutUser}/>
     </aside>
 
     {/* Main  content area */}
     <main className="main-content0">
-          <Header/>
+          <Searchbar/>
       <div className="content-sections0">
         <div>
           <HireCandidates candidates={candidates}/>
@@ -81,4 +84,4 @@ const Login = () => {
 );
 };
 
-export default Login;
+export default Dashboard;

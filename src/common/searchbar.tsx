@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Login Page.css/header2.css';
+import '../css/common/searchbar.css';
 
 <link
   rel="stylesheet"
@@ -7,7 +7,7 @@ import '../../css/Login Page.css/header2.css';
 />
 
 
-const Header: React.FC = () => {
+const Searchbar: React.FC = () => {
   return (
     <div className="header2h">
   <div className='v'>
@@ -35,4 +35,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Searchbar;
