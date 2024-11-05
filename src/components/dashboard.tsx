@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Calendar from '../common/calendar';
 import Sidebar from '../common/leftsidebar';
 import Searchbar from '../common/searchbar';
@@ -15,14 +15,14 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
 
-  const candidates = [
-    { id: 1, role: 'Content Designer', count: 5, iconUrl: '/images/content designer.png' },
-    { id: 2, role: 'PHP Developer', count: 8, iconUrl: '/images/web-programming.png' },
-    { id: 3, role: 'UI/UX Designer', count: 5, iconUrl: '/images/UIUX.png' },
-    { id: 4, role: 'iOS Developer', count: 10, iconUrl: '/images/apple.png' },
-    { id: 5, role: 'Android Developer', count: 10, iconUrl: '/images/developer.png' },
-  ];
-
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  interface Candidate {
+    id: number;
+    role: string;
+    count: number;
+    iconUrl: string;
+  }
+  
   const progressData = [
     { id: 1, name: 'John Doe', designation: 'UI/UX Designer', status: 'Tech Interview' },
     { id: 2, name: 'Sam Emmanuel', designation: 'UI/UX Designer', status: 'Task' },
@@ -47,6 +47,20 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
     { id: 5, name: 'Zara Thomas', designation: 'Applied for:Content Designer', imgUrl: '/images/Zara1.png'},
     { id: 6, name: 'John Samuel', designation: 'Applied for:iOS Developer', imgUrl: '/images/John.png' }
   ];
+
+  useEffect(() => {
+    const fetchCandidates = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/candidates');
+        const data = await response.json();
+        setCandidates(data);
+      } catch (error) {
+        console.error('Error fetching candidates data:', error);
+      }
+    };
+
+    fetchCandidates();
+  }, []);
 
 
   return (
