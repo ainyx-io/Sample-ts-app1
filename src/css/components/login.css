@@ -1,102 +1,55 @@
-body {
-  font-family: Arial, sans-serif;
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.container-fluid .row{
+  width: 100%;
+  height:auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+}
+
+/* Grid layout adjustments for responsiveness */
+
+
+/* Styling for form section and image section */
+.form-section,
+.bg-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #e8ebf9;
-  margin: 0;
 }
 
-.Main {
-  max-width: 180vw; 
-  width: 93%;
+.bg-img img {
+  width: 100%;
   height: auto;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  margin-left:2.5rem;
 }
 
-.A11 {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Responsive split */
-}
-
-@media (max-width: 768px) {
-  .A11 {
-    grid-template-columns: 1fr; /* Stack on smaller screens */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .container-fluid {
+      grid-template-columns: 1fr; /* Single column for medium screens */
+  }
+  .container-fluid .row {
+      display: flex;
+      flex-wrap: wrap;
   }
 }
 
-.a11,
-.a21 {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 768px) {
+  .container-fluid {
+      grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
 }
 
-.a11 {
-  background-color: white;
-}
-
-.b11 img {
-  max-width: 60px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.b11 h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #3b4cca;
-}
-
-.b21 {
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.b21 h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3b4cca;
-}
-
-.form1 {
-  width: 80%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form1 input {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 1rem;
-}
-
-.form1 .btn-primary {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #4f5bd5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.a21 {
-  background: linear-gradient(135deg, #3b4cca, #6a7fe9);
-  color: white;
-}
-
-.a21 img {
-  width: 100%;
-  max-width:70vh;
-  height: auto;
+@media (max-width: 576px) {
+  .form-section h1,
+  .form-section h3 {
+      font-size: 1.5rem; /* Adjust heading size on very small screens */
+  }
 }

@@ -16,40 +16,18 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
     return (
-    <div className='whole'>
-    <Card className='main-card1'>
-    <div className="app-layout3">
-      {/* Sidebar with logout functionality */}
-      <aside className="sidebarK">
-         <Sidebar logoutUser={logoutUser} />
-      </aside>
-
-      {/* Main content area */}
-      <main className="main-content0">
-        <Searchbar />
-        <div className="content-sections0">
-          <div>
-            <HireCandidates />
-          </div>
-          <div>
-            <RecruitmentProgress />
-          </div>
+      <div className="container1">
+      <div className="row">
+        <div className="col sidebarm">
+          <h1>suni</h1>
         </div>
-      </main>
-
-      {/* Right Sidebar */}
-      <aside className="right-sidebar">
-        <UserProfile
-          name="Sara Abraham"
-          designation="View Profile"
-          profileImgUrl="https://via.placeholder.com/150"
-        />
-        <Calendar />
-        <NewApplicants />
-        <TrainingParticipants />
-      </aside>
-    </div>
-    </Card>
+        <div className="col-5 middlem">
+          <h1>sunitha</h1>
+        </div>
+        <div className="col rightm">
+          <h1>honey</h1>
+        </div>-
+      </div>
     </div>
   );
 };

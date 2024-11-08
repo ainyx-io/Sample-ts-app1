@@ -5,7 +5,7 @@ interface Candidate {
   id: number;
   role: string;
   count: number;
-  iconUrl?: string;
+  iconurl?: string;
 }
 
 const HireCandidates: React.FC = () => {
@@ -46,7 +46,7 @@ const HireCandidates: React.FC = () => {
           {candidates.map((candidate) => (
             <div key={candidate.id} className="candidate-card">
               <img
-                src={`${process.env.PUBLIC_URL}${candidate.iconUrl}`}
+                src={candidate.iconurl}
                 alt={candidate.role}
                 className="candidate-icon"
               />

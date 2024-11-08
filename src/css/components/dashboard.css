@@ -1,77 +1,74 @@
-.app-layout3 {
-  display: grid;
-  grid-template-columns: 220px 1fr 300px; /* Flexible middle column for main content */
-  grid-template-rows: auto 1fr; /* Header + Main Content */
-  height: 100vh;
-  overflow: hidden; /* Prevents any overflow from scaling */
-  transform-origin: top; /* Ensures scaling starts from the top left */
-  transform: scale(1);
-}
-
-.whole {
-  /* background-color: black; */
-  overflow: hidden; /* Prevents scrolling from scaling adjustments */
-}
-
-.main-card1{
-  height: 73vh; /* Adjusted for flexible scaling */
-  width: 94vw;
-   max-width:72rem; /* Maximum limit */
-  border-radius: 25px;
-  overflow: hidden; /*  Hides any overflow content */
-   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-   transform: scale(1); /* Locks scaling to 100% */
-   transform-origin: top left; /* Ensures scaling starts from the top left */
-  border:2px solid white;
- }
-
-/* Sidebar styling */
-.sidebarK{
-  grid-column: 1 / 2; /* Place sidebar in the first column */
-  overflow: hidden;
-}
-
-/* Main content area */
-.main-content0 {
-  grid-column: 2 / 3; /* Main content in the center */
-  background-color: #e6ebfb;
-  padding: 2.4vw;  /* Responsive padding */
-  overflow: hidden; /* Prevents unwanted scrolling */
-  transform: scale(1); /* Locks scaling for main content */
-  transform-origin: top left;
-}
-
-/* Content sections like 'You Need to Hire' and 'Recruitment Progress' */
-.content-sections0 {
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-}
-
-/* Right sidebar styling */
-.right-sidebar {
-  grid-column: 3 / 4; /* Place right sidebar in the last column */
-   overflow: hidden; /*Prevents unwanted scrolling */
-  transform: scale(1); /* Locks scaling for main content */
-  transform-origin: top left;
-} 
-
-/* Top bar styling */
-.top-bar .top-right-icons {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 40px;
-  background-color: #f8f9fa;
-  z-index: 1000;
-  padding: 0.5vw;
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  overflow: hidden; /* Prevents icons from overflowing */
-  transform: scale(1); /* Locks scaling for top-right icons */
-  transform-origin: top right;
 }
 
+/* Container and row styling */
+.container1 .row{
+  width: 100%;
+  padding: 20px;
+  display:grid;
+}
 
+/* .container1 .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+} */
+
+/* Column styling */
+.sidebarm,
+.middlem,
+.rightm{
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+/* Flexbox layout for columns */
+.sidebarm{
+  flex: 1 1 15%; /* Sidebar takes about 15% of the width */
+}
+
+.middlem{
+  flex: 1 1 50%; /* Middle column takes about 50% of the width */
+}
+
+.rightm{
+  flex: 1 1 25%; /* Right column takes about 25% of the width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .row {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+
+
+  .sidebarm, .middlem, .rightm{
+      flex: 1 1 100%; /* Full-width columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.8rem; /* Adjust heading size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+      font-size: 1.5rem; /* Adjust heading size for small screens */
+  }
+
+  .sidebarm, .middlem, .rightm{
+      padding: 15px;
+      border-radius: 4px;
+  }
+}
