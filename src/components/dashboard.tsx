@@ -24,17 +24,20 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           </aside>
         </div>
         <div className="col-lg-5 middlem">
-          <h1>sunitha</h1>
-          {/* <Searchbar />
-        <div className="content-sections0">
-          <div>
-            <HireCandidates />
+          <div className='col-lg-11 topone' style={{height: '30vh'}}>
+          <Searchbar />
           </div>
+          <div className='col-lg-11 middleone' style={{height: '30vh'}}>
+          <HireCandidates />
+          </div>
+          
+          </div>
+           {/* 
           <div>
             <RecruitmentProgress />
           </div>
         </div> */}
-        </div>
+        
         <div className="col-lg-1 rightm">
           <h1>honey</h1>
         </div>

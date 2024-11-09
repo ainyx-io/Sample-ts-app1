@@ -36,13 +36,13 @@ const HireCandidates: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="IJ">
-      <div className="t">
+    <div className="col-lg-11 IJ" style={{height: '30vh'}}>
+      <div className="col-lg-12 t">
         <h6 className="title">You Need to Hire</h6>
         <button className="Fbtn-primary" type="button">View All</button>
       </div>
-      <div className='hire-candidates'>
-        <div className="candidates-list">
+      <div className='col-lg-12 hire-candidates'>
+        <div className="col-lg-12 candidates-list" style={{height: '18vh'}}>
           {candidates.map((candidate) => (
             <div key={candidate.id} className="candidate-card">
               <img

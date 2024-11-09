@@ -38,6 +38,7 @@
 
 .middlem{
   flex: 1 1 50%; /* Middle column takes about 50% of the width */
+  flex-direction: column;
 }
 
 .rightm{
