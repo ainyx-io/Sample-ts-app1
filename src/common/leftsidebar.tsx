@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ logoutUser }) => {
 
 
   return (
-    <div className="sidebarI">
+    <div className="col-lg-1 sidebarm1">
       <h2 className="sidebar-title">
         <img src="/images/logo.png" alt="Logo" />
         Hireism
@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ logoutUser }) => {
         <ul className="sidebar-menu">
           <li className="sidebar-item1" style={{ backgroundColor: '#9FB4EF' }}>
             <MdDashboard className="sidebar-icon1" style={{ color: '#3F6AD8' }} />
-            <span style={{ color: '#6F8FE4' }}>Dashboard</span>
+           <span style={{ color: '#6F8FE4' }}>Dashboard</span>
           </li>
           <li className="sidebar-item2">
             <MdPersonSearch className="sidebar-icon2" />

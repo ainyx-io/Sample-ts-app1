@@ -6,23 +6,24 @@
 }
 
 /* Container and row styling */
-.container1 .row{
+.container1 {
   width: 100%;
-  padding: 20px;
-  display:grid;
+  height: auto;
 }
 
-/* .container1 .row {
+.row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-between;
-} */
+}
 
 /* Column styling */
 .sidebarm,
 .middlem,
 .rightm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   text-align: center;
   background-color: #f0f0f0;
@@ -31,6 +32,7 @@
 
 /* Flexbox layout for columns */
 .sidebarm{
+  background-color:white;
   flex: 1 1 15%; /* Sidebar takes about 15% of the width */
 }
 
@@ -40,6 +42,7 @@
 
 .rightm{
   flex: 1 1 25%; /* Right column takes about 25% of the width */
+  background-color:white;
 }
 
 /* Responsive adjustments */
@@ -48,8 +51,6 @@
       flex-direction: column;
       gap: 15px;
   }
-
-
 
   .sidebarm, .middlem, .rightm{
       flex: 1 1 100%; /* Full-width columns on medium screens */

@@ -8,25 +8,36 @@ import UserProfile from '../common/topbarprofile';
 import NewApplicants from '../common/newapplicants';
 import TrainingParticipants from '../common/trainingparticipants';
 import '../css/components/dashboard.css';
-import {Card} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 interface DashboardProps {
   logoutUser: () => void;
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
-    return (
-      <div className="container1">
+  return (
+    <div className="container1">
       <div className="row">
-        <div className="col sidebarm">
-          <h1>suni</h1>
+        <div className="col-lg-1 sidebarm">
+          <aside className="sidebarK">
+            <Sidebar logoutUser={logoutUser} />
+          </aside>
         </div>
-        <div className="col-5 middlem">
+        <div className="col-lg-5 middlem">
           <h1>sunitha</h1>
+          {/* <Searchbar />
+        <div className="content-sections0">
+          <div>
+            <HireCandidates />
+          </div>
+          <div>
+            <RecruitmentProgress />
+          </div>
+        </div> */}
         </div>
-        <div className="col rightm">
+        <div className="col-lg-1 rightm">
           <h1>honey</h1>
-        </div>-
+        </div>
       </div>
     </div>
   );
