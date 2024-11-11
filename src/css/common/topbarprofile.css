@@ -3,7 +3,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8f9fa;
+ 
   border-bottom: 1px solid #ddd;
 }
 
@@ -15,6 +15,7 @@
 .user-profile {
   display: flex;
   align-items: center;
+  background-color:cadetblue;
 }
 
 .icons {
@@ -54,4 +55,74 @@
   height: 40px;
   border-radius: 50%;
   border: 2px solid #ccc;
+}
+
+
+/* Original topbar.css code here */
+/* ... */
+
+/* Media query for screens smaller than 768px (tablet and mobile) */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 5px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-right-icons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-name {
+    font-size: 1em;
+  }
+
+  .user-designation {
+    font-size: 0.8em;
+  }
+
+  .profile-img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Media query for screens smaller than 576px (mobile) */
+@media (max-width: 576px) {
+  .top-bar {
+    padding: 5px;
+  }
+
+  .icons {
+    margin-right: 5px;
+  }
+
+  .settings-icon, .notification-icon {
+    font-size: 16px;
+  }
+
+  .user-name {
+    font-size: 0.9em;
+  }
+
+  .user-designation {
+    font-size: 0.7em;
+  }
+
+  .profile-img {
+    width: 30px;
+    height: 30px;
+  }
 }

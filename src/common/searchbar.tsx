@@ -27,7 +27,7 @@ const Searchbar: React.FC = () => {
           <button type="button" className="btn-success">Review it</button>
         </div>
         <div className='col-lg-6 b'>
-          <img src="/images/asset2.png" alt="" className="img-fluid"/>
+          <img src="" alt="" className="img-fluid"/>
         </div>
 
       </div>

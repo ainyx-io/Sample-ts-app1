@@ -1,116 +1,84 @@
 .recruitment-progress {
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  overflow: hidden;
-  transform: scale(1);
-  transform-origin: top;
-  margin-left:-16px;
-  width:540px;
-}
-
-.progress-bar {
-  height: 10px;
-  background-color: #3f6ad8;
-  border-radius: 5px;
-}
-
-/* .recruitment-progress {
+  padding: 1px;
   background-color: white;
-  padding: 16px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-left:-16px;
-  width:540px;
-} */
-
-
-.CD{
-  margin-top:15px;
-  margin-left:-0.8rem;
+  margin-top: 1vh;
+  height: auto;
+  width:100%;
 }
 
-
-.CD h3{
-  font-size: small;
-  margin-left:-12px;
-  margin-top:-23px;
-  font-weight:bold;
+.CD {
+  /* margin-top: -7vh; */
+  background-color: bisque;
+  margin-left: 4vh;
+  padding: 10px;
+  border-radius: 10px;
+  transform:scale(1);
 }
 
+.CD h3 {
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
 
 .x .title {
-  font-size:small;
-  font-weight:bold;
-  margin-bottom: 16px;
-  margin-left:-16px;
-  transform: scale(1);
-}
-
-
-.progress-table {
-  width: 90%;
-  border-collapse: collapse;
-  padding:3px;
-}
+  font-size: medium;
+  font-weight: bold;
+  text-align: left;
+  }
 
 
 .progress-table th,
 .progress-table td {
-  padding:5px;
+  padding: 10px;
   text-align: left;
+  font-size: 14px;
 }
 
+.progress-table th {
+  color: gray;
+  font-weight: normal;
+}
 
 .progress-table td {
-  font-size:x-small;
-  font-weight:bold;
+  font-weight: bold;
   color: black;
 }
-
-
-.progress-table th{
-  color:gray;
-  font-size:small;
-  font-weight:lighter;
-}
-
 
 .progress-table tr {
   border-bottom: 1px solid #e0e0e0;
 }
 
-
 .status-bullet {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   margin-right: 8px;
 }
 
-
-.Abtn-primary{
-  margin-left:330px;
-  margin-bottom:20px;
-  background-color:#3F6AD8;
-  width:77px;
-  color:white;
+.Abtn-primary {
+  margin-left: auto;
+  background-color: #3F6AD8;
+  width: auto;
+  padding: 5px 15px;
+  color: white;
   cursor: pointer;
-  font-size: x-small;
-  padding-top:-1px;
-  height:2.8vh;
-  border-radius:5px;
+  font-size: small;
+  height: 30px;
+  border-radius: 5px;
   text-align: center;
-  border:none;
-  margin-top:-28px;
-  margin-right:-1.2rem;
-  transform: scale(1);
+  border: none;
 }
 
+@media (min-width: 577px) and (max-width: 992px) {
+    .CD {
+      padding-top: 1rem;
+      padding: 20px; 
+       margin-left:14rem;
+       min-width:550px;
+    }
+}
 
-.x{
-  display:flex;
-  flex-direction:row;
-  margin-bottom:-10px;
-  }

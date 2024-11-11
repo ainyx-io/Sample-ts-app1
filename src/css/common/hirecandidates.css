@@ -1,26 +1,24 @@
-/* General Styles */
 .hire-candidates {
   padding: 15px;
   background-color: aquamarine;
   border-radius: 10px;
-  transform: scale(1);
-  transform-origin: top;
   align-items: center;
   justify-items: center;
   margin-left:7.7rem;
   height: auto;
   justify-content: space-between;
   margin-top: -17vh;
-}
+  transform:scale(1);
+  transform-origin:top;
+  }
 
 .t {
   margin-top: 10vh;
 }
 
 .candidates-list {
-  display: flex;
+  display:flex;
   flex-direction: row;
-  margin-left: 9px;
   padding: 15px;
   background-color: #e6ebfb;
   border-radius: 10px;
@@ -30,11 +28,13 @@
   margin-top: 3vh;
   align-items: center;
   justify-content: space-between; /* This will ensure proper alignment between items */
+  height: auto;
+  margin-left:-7vh;
 }
 
 .candidate-card {
-  padding-right: 3px;
-  height: 11vh;
+  /* padding-right: 3px; */
+  height:auto;
   text-align: center;
   padding: 15px;
   background-color: #f8f9fa;
@@ -125,9 +125,8 @@
 @media (max-width: 576px) {
   /* Update the layout for the header and main content */
   .IJ {
-    padding-top: 1rem;
-    padding: 15px;
-    margin-left:13rem;
+
+    margin-left:2rem;
   }
 
   .hire-candidates {
@@ -140,11 +139,13 @@
   .t {
     display: block;
     margin-top: 10px;
+    width: 100%;
   }
 
   .candidates-list {
     flex-direction: column; /* Stack the cards vertically on small screens */
     gap: 15px;
+ 
   }
 
   .candidate-card {
@@ -170,11 +171,12 @@
 @media (min-width: 577px) and (max-width: 992px) {
   .hire-candidates {
     padding: 15px;
+
   }
     .IJ {
-      padding-top: 1rem;
-      padding: 15px;
-      margin-left:5rem;
+     
+      padding: 15px; 
+       margin-left:8.5rem;
     }
   
 
@@ -207,7 +209,7 @@
   }
 
   .candidate-card {
-    width: 169px; /* Set the original width on desktop */
+    width: 100%; /* Set the original width on desktop */
     height: auto;
   }
 
@@ -216,3 +218,6 @@
     font-size: small;
   }
 }
+
+  
+  

@@ -9,6 +9,8 @@
 .container1 {
   width: 100%;
   height: auto;
+  overflow: hidden;
+  overflow-y: hidden; /* Hides vertical overflow */
 }
 
 .row {
@@ -30,6 +32,31 @@
   border-radius: 8px;
 }
 
+
+
+ .bottomone{
+  margin-top:-10vh;
+} 
+
+.rightm1{
+  margin-left:-10vh;
+}
+
+.rightm2{
+  margin-top: 7vh;
+  margin-left:-10vh;
+}
+
+.rightm3{
+ margin-left: 17vh;
+ margin-top:-12vh;
+margin-bottom: 0.5vh;
+}
+
+.rightm4{
+  margin-left:-12vh;
+}
+
 /* Flexbox layout for columns */
 .sidebarm{
   background-color:white;
@@ -44,6 +71,7 @@
 .rightm{
   flex: 1 1 25%; /* Right column takes about 25% of the width */
   background-color:white;
+  flex-direction: column;
 }
 
 /* Responsive adjustments */
@@ -74,3 +102,14 @@
       border-radius: 4px;
   }
 }
+
+@media (max-width: 767px) {
+  .topone, .middleone, .bottomone {
+    min-height: auto;
+  }
+
+  .rightm1{
+    min-height: auto;
+  }
+}
+

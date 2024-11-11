@@ -1,111 +1,156 @@
-.schedule-calendar {
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-    gap: 5px;
-    overflow: hidden;
-    transform: scale(1);
-    transform-origin: top;
-    margin-left:5.2rem;
-    margin-top:-1rem;
-  }
-  
-  .Scard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f4f8;
-    border-radius: 10px;
-    width: 50px;
-    height: 67px;
-    overflow: hidden;
-    transform: scale(1);
-    transform-origin: top;
-    }
 
-  /* .schedule-calendar {
-    display: flex;
-    /* justify-content:flex-start; Adjust spacing between the cards */
-    /* padding: 10px;
-    gap:5px;
-    margin-top:-17px;
-    margin-left:5.5rem;
-  } */
-     
-  .w{
-    display:grid;
-    grid-template-columns:1fr 0.1fr;
-    margin-top:30px;
-    margin-left:10px;
+.schedule-calendar {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 12px;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top;
+}
+
+
+.Scard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  width:3.5vw;
+  height: 8.5vh;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top;
   }
-  
-  
-  .w h6{
-    font-size: small;
-    font-weight:bold;
-    margin-left:85px;
+
+
+
+
+   
+.w{
+  display:grid;
+  grid-template-columns:1fr 0.1fr;
+  margin-top:30px;
+  margin-left:10px;
+  padding-bottom:10px;
+}
+
+
+
+
+.w h6{
+  font-size: small;
+  font-weight:bold;
+  margin-left: -25vh;
+}
+
+
+
+
+.IJ1{
+  margin-bottom: 5vh;
+  background-color:burlywood;
   }
-  
-  
-  .IJ{
-    margin-top:60px;
-  }
-  
-  
-  .Dbtn-primary{
-    /* margin-bottom:-16px; */
-    background-color:#3F6AD8;
-    width:77px;
-    color:white;
-    cursor: pointer;
-    font-size: x-small;
-    padding-top:-1px;
-    height:2.5vh;
-    border-radius:5px;
-    text-align: center;
-    border:none;
-    margin-left:-65px;
-  }
-  
-  
-  
-  
-  /* Individual cards */
-  /* .Scard {
-    display: flex;
-    flex-direction: column; /* Align content in columns (icon, day, number) */
-    /* align-items: center; /* Center align items horizontally */
-    /* justify-content: center; /* Center align items vertically */
-    /* background-color:#f0f4f8;
-    border-radius: 10px; */ */ */
-    /* width: 48px; /* Set a fixed width for cards */
-    /* height: 67px; Set a fixed height for cards */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* margin:0; */ 
-  /* } */ */
-  
-  
-  /* Text styling inside each card */
-  .Scard .day {
-    font-size:small;
-    font-weight: bold;
-  }
-  
-  
-  .Scard .number {
-    font-size: 10px;
-    margin-top: 5px; /* Space between day and number */
-  }
-  
-  
-  /* If you want all cards to take equal width dynamically */
-   .schedule-calendar .card {
-    flex: 1;
-    margin:1px; /* Space between the cards */
+
+
+
+
+.Dbtn-primary{
+  /* margin-bottom:-16px; */
+  background-color:#3F6AD8;
+  width:77px;
+  color:white;
+  cursor: pointer;
+  font-size: x-small;
+  padding-top:-1px;
+  height:2.5vh;
+  border-radius:5px;
+  text-align: center;
+  border:none;
    }
-  
-  
-  
-  
-  
+
+
+/* Text styling inside each card */
+.Scard .day {
+  font-size:small;
+  font-weight: bold;
+}
+
+
+
+
+.Scard .number {
+  font-size: 10px;
+  margin-top: 5px; /* Space between day and number */
+}
+
+
+
+
+/* If you want all cards to take equal width dynamically */
+ .schedule-calendar .card {
+  flex: 1;
+  margin:1px; /* Space between the cards */
+ }
+
+
+
+
+/* Base styles for images inside .Scard */
+.Scard img {
+  width: 100%; /* Ensures images take up the full width of their container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent the image from stretching beyond its container */
+}
+
+/* Media Queries */
+
+/* Small screens (Mobile devices) */
+@media screen and (max-width: 480px) {
+  .Scard img {
+    width: 100%; /* Image takes up full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .Scard{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablets (Landscape and Portrait) */
+@media screen and (max-width: 768px) {
+  .Scard img {
+    width: 100%; /* Image takes up full width on tablets */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .Scard{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For small desktop or large tablets */
+@media screen and (max-width: 1024px) {
+  .Scard img {
+    width: 100%; /* Image will be 100% width of the card */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .Scard{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Large Screens (Desktops) */
+@media screen and (min-width: 1200px) {
+  .Scard img {
+    width: 100%; /* Images will take the full width of the card on large screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .Scard{
+    width: 100%;
+    height: auto;
+  }
+}

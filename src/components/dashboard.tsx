@@ -24,25 +24,45 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           </aside>
         </div>
         <div className="col-lg-5 middlem">
-          <div className='col-lg-11 topone' style={{height: '30vh'}}>
-          <Searchbar />
+          <div className='col-lg-11 topone' style={{ minHeight: '30vh' }}>
+            <Searchbar />
           </div>
-          <div className='col-lg-11 middleone' style={{height: '30vh'}}>
-          <HireCandidates />
+
+          <div className='col-lg-11 middleone' style={{ minHeight: '30vh' }}>
+            <HireCandidates />
           </div>
-          
-          </div>
-           {/* 
-          <div>
+
+          <div className='col-lg-11 bottomone' style={{ minHeight: '30vh' }} >
             <RecruitmentProgress />
           </div>
-        </div> */}
-        
-        <div className="col-lg-1 rightm">
-          <h1>honey</h1>
         </div>
+
+        <div className="col-lg-1 rightm">
+          <div className='rightm1'>
+            <UserProfile
+              name="Sara Abraham"
+              designation="View Profile"
+              profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
+            />
+          </div>
+          <div className='rightm2' style={{ minHeight: '30vh' }}>
+            <Calendar />
+          </div>
+          <div className='rightm3' style={{ minHeight: '30vh' }}>
+            <NewApplicants />
+          </div>
+
+          <div className='rightm4' style={{ minHeight: '30vh' }} >
+            <TrainingParticipants />
+          </div>
+        </div>
+
+
+
+
+
       </div>
-    </div>
+    </div >
   );
 };
 

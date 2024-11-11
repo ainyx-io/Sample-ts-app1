@@ -36,12 +36,12 @@ const TrainingParticipants: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="GH">
+    <div className="col-lg-12 GH" style={{minHeight: '20vh'}}>
       <div className="z">
         <h6 className="title">Ready for Training</h6>
         <button className="Cbtn-primary" type="button">View All</button>
       </div>
-      <div className="training-participants">
+      <div className="col-lg-11 training-participants">
         <div className="participants-list">
           {participants.map((participant) => (
             <div key={participant.id} className="participant-card">

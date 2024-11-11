@@ -55,13 +55,13 @@ const RecruitmentProgress: React.FC = () => {
 
 
   return (
-    <div className='CD'>
-      <div className='x'>
+    <div className='col-lg-11 CD' style={{minHeight: '37vh'}}>
+      <div className='col-lg-12 x'>
         <h3 className="title">Recruitment Progress</h3>
         <button className="Abtn-primary" type="button">View All</button>
       </div>
-      <div className="recruitment-progress">
-        <table className="progress-table">
+      <div className="col-lg-9 recruitment-progress" style={{minHeight: '28vh'}}>
+        <table className="col-lg-9 progress-table">
           <thead>
             <tr>
               <th>Full Name</th>

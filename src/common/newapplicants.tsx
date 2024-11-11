@@ -6,7 +6,7 @@ interface Applicant {
   id: number;
   name: string;
   designation: string;
-  imgUrl: string;
+  imgurl: string;
 }
 
 const NewApplicants: React.FC = () => {
@@ -37,23 +37,23 @@ const NewApplicants: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="new-applicants-section">
+    <div className="col-lg-7 new-applicants-section" style={{minHeight: '33vh'}} >
     <div className="y">
       <h6 className="title">New Applicants</h6>
       <button className="view-all-btn" type="button">View All</button>
     </div>
-    <div className='new-applicants'>
+    <div className='col-lg-10 new-applicants'>
       <div className="applicants-list">
         {applicants.map((applicant) => (
-              <div key={applicant.id} className="applicant-card">
+              <div key={applicant.id} className="applicant-card" style={{minHeight: '6vh',minWidth:'20vw'}}>
             <img
-              src={applicant.imgUrl}
+              src={applicant.imgurl}
               alt={applicant.name}
               className="applicant-image"
             />
              <div className="applicant-details">
-              <h5 className="applicant-name">{applicant.name}</h5>
-              <h6 className="applicant-designation">{applicant.designation}</h6>
+              <h2 className="applicant-name">{applicant.name}</h2>
+              <h4 className="applicant-designation">{applicant.designation}</h4>
             </div>
             <div className="applicant-actions">
               <FaEnvelope className="message-icon" title="Send Message" />

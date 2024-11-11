@@ -12,12 +12,12 @@ const dates = [
 
 const Calendar = () => {
   return (
-  <div className='IJ'>
+  <div className='col-lg-9 IJ1' style={{minHeight: '13vh',minWidth:'19vw'}}>
     <div className='w'>
       <h6>Schedule Calendar</h6>
       <button className="Dbtn-primary" type="button">May</button>
     </div>
-     <div className="schedule-calendar">
+     <div className="col-lg-12 schedule-calendar">
   <div className="Scard">
     <span className="day">Mon</span>
     <span className="number">22</span>
