@@ -26,7 +26,7 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
             </aside>
           </div>
 
-          <div className="col-lg-10 main-content2">
+          <div className="col-lg-10 main-content2" style={{minHeight:"100vh"}}>
 
             <UserProfile
               name="Sara Abraham"

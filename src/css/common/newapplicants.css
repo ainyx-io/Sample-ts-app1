@@ -4,6 +4,7 @@
   border-radius: 10px;
   overflow: hidden;
   height: auto;
+  width:100%;
 }
 
 .applicant-info {
@@ -16,9 +17,10 @@
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: -1rem;
-  background-color: darkkhaki;
+  /* background-color: darkkhaki; */
   align-items: center;
   justify-items: center;
+
 }
 
 .y {
@@ -60,8 +62,7 @@
   background-color: #f7f9fc;
   border-radius: 8px;
   margin-bottom: 2px;
-  width: 32vw;
-  background-color: #e7ebfd;
+   background-color: #e7ebfd;
 }
 
 .applicant-image {

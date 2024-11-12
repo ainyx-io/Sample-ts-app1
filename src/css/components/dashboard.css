@@ -19,6 +19,11 @@
   justify-content: space-between;
 }
 
+.threethings{
+  /* background-color: palevioletred; */
+  margin-bottom:-8vh;
+}
+
 /* Column styling */
 .sidebarm,
 .middlem,
@@ -39,7 +44,8 @@
 .middlem{
   display: flex;
   flex-direction:column;
-  background-color: aqua;
+  /* background-color: aqua; */
+  background-color:#E5E5FB;
 }
 
 .rightm{
@@ -51,10 +57,11 @@
 
 .middleone{
   margin-bottom:1vh;
+  margin-top:8vh;
 }
 
  .bottomone{
-  margin-top:-8vh;
+  margin-top:-15vh;
 } 
 
 /* .rightm1{
@@ -63,13 +70,19 @@
   margin-top:-30vh;
 } */
 
+.topone,.middleone,.bottomone{
+  padding-bottom:10px;
+}
+
+.rightm1,.rightm2,.rightm3,.rightm4{
+  padding-bottom:10px;
+}
+
 .rightm2{
   margin-top: 1vh;
-  margin-left:-10vh;
 }
 
 .rightm3{
- margin-left: 17vh;
  margin-top:-3vh;
 }
 

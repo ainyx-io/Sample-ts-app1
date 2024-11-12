@@ -6,24 +6,25 @@
 }
 
 .main-content2 {
-  background-color: blanchedalmond;
-  height: 100vh;
+  /* background-color: blanchedalmond; */
   padding: 20px;
   flex-grow: 1; /* Ensure the content takes up remaining space */
+  background-color:#E5E5FB;
 }
 
-.mbody {
+/* .mbody {
   background-color: dimgray;
-}
+} */
 
 .content-sections2 {
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   margin-bottom: 1vh;
   align-items: center;
   justify-items: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-radius: 8px;
+  background-color:#E5E5FB;
 }
 
 .a1, .b1, .c1 {
@@ -31,7 +32,7 @@
 }
 
 .mtable {
-  background-color: indianred;
+  /* background-color: indianred; */
   margin-top: 20px;
 }
 

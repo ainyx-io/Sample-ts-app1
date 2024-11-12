@@ -1,6 +1,6 @@
 .hire-candidates {
   padding: 15px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   border-radius: 10px;
   align-items: center;
   justify-items: center;
@@ -14,6 +14,7 @@
 
 .t {
   margin-top: 10vh;
+
 }
 
 .candidates-list {
@@ -29,8 +30,7 @@
   align-items: center;
   justify-content: space-between; /* This will ensure proper alignment between items */
   height: auto;
-  margin-left:-7vh;
-}
+} 
 
 .candidate-card {
   /* padding-right: 3px; */
@@ -55,17 +55,17 @@
 
 .t {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.1fr;
 }
 
-.t .title {
+/* .t .title {
   font-size: small;
   font-weight: bold;
   color: #333;
   transform: scale(1);
   overflow: hidden;
   transform-origin: top left;
-}
+ } */
 
 /* Candidate Icon */
 .candidate-icon {
@@ -107,18 +107,24 @@
 .Fbtn-primary {
   margin-bottom: 20px;
   background-color: #3f6ad8;
-  width: 77px;
-  color: white;
+    color: white;
   cursor: pointer;
   font-size: x-small;
   height: 2.8vh;
   border-radius: 5px;
   text-align: center;
   border: none;
-  margin-top: -1.7rem;
+  margin-top: -20vh;
   transform: scale(1);
   overflow: hidden;
   transform-origin: top left;
+}
+
+
+
+.t h6{
+  margin-top: -20vh;
+  margin-left:-10vh;
 }
 
 /* Mobile (Small Screens) */
@@ -153,10 +159,10 @@
     height: auto;
    }
 
-  .Fbtn-primary {
+  /* .Fbtn-primary {
     width: 100%; /* Make the button full width */
-    font-size: small;
-  }
+    /* font-size: small;
+  } */ */
 
   .candidate-details h5 {
     font-size: small;
@@ -195,10 +201,10 @@
     height: auto;
   }
 
-  .Fbtn-primary {
-    width: auto;
+  /* .Fbtn-primary {
+    width: 100%;
     font-size: small;
-  }
+  } */
 }
 
 /* Desktop Screens (Large Devices) */
@@ -213,10 +219,10 @@
     height: auto;
   }
 
-  .Fbtn-primary {
-    width: auto;
+  /* .Fbtn-primary {
+    width: 100%;
     font-size: small;
-  }
+  } */
 }
 
   

@@ -37,12 +37,12 @@ const NewApplicants: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="col-lg-7 new-applicants-section" style={{minHeight: '33vh'}} >
+    <div className="col-lg-7 new-applicants-section" style={{minHeight: '33vh',minWidth:'20vw'}} >
     <div className="y">
       <h6 className="title">New Applicants</h6>
       <button className="view-all-btn" type="button">View All</button>
     </div>
-    <div className='col-lg-11 new-applicants'>
+    <div className='col-lg-11 new-applicants'style={{minHeight: '33vh',minWidth:'20vw'}}>
       <div className="applicants-list">
         {applicants.map((applicant) => (
               <div key={applicant.id} className="applicant-card" style={{minHeight: '6vh',minWidth:'20vw'}}>

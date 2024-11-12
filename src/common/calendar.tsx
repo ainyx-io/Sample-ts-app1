@@ -38,15 +38,15 @@ const Calendar: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="col-lg-12 calendar-wrapper" style={{ minHeight: '15vh' ,width:'20vw'}}>
-      <div className="col-lg-12 calendar-header">
+    <div className="col-lg-11 calendar-wrapper" style={{ minHeight: '15vh' ,minWidth:'15vw'}}>
+      <div className="col-lg-11 calendar-header">
         <h6 className="calendar-title">Schedule Calendar</h6>
         <button className="calendar-btn" type="button">
           May
         </button>
       </div>
 
-      <div className="col-lg-11 schedule-calendar">
+      <div className="col-lg-9 schedule-calendar">
         <div className="row">
           {calendarDays.map((day) => (
             <div key={day.id} className="col-lg-2 schedule-card">

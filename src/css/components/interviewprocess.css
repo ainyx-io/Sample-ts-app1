@@ -7,7 +7,8 @@
 }
 
 .main-content1 {
-  background-color: chocolate;
+  /* background-color: chocolate; */
+  background-color: #E5E5FB;
   flex-grow: 1; /* Allow content to expand */
   padding: 20px;
 }

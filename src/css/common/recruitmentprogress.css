@@ -12,7 +12,7 @@
 
 .CD {
   /* margin-top: -7vh; */
-  background-color: bisque;
+  /* background-color: bisque; */
   margin-left: 4vh;
   padding: 10px;
   border-radius: 10px;
@@ -63,9 +63,8 @@
 }
 
 .Abtn-primary {
-  margin-left: auto;
   background-color: #3F6AD8;
-  width: auto;
+  /* width: auto; */
   padding: 5px 15px;
   color: white;
   cursor: pointer;
@@ -74,6 +73,8 @@
   border-radius: 5px;
   text-align: center;
   border: none;
+  margin-right: -50vh;
+  margin-top:-25vh;
 }
 
 @media (min-width: 577px) and (max-width: 992px) {

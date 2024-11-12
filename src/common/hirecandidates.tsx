@@ -37,12 +37,12 @@ const HireCandidates: React.FC = () => {
 
   return (
     <div className="col-lg-11 IJ" style={{minHeight: '30vh'}}>
-      <div className="col-lg-12 t">
+      <div className="col-lg-11 t">
         <h6 className="title">You Need to Hire</h6>
         <button className="Fbtn-primary" type="button">View All</button>
       </div>
       <div className='col-lg-12 hire-candidates'>
-        <div className="col-lg-11 candidates-list" >
+        <div className="col-lg-12 candidates-list" >
           {candidates.map((candidate) => (
             <div key={candidate.id} className="candidate-card">
               <img

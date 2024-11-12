@@ -5,6 +5,9 @@
   overflow: hidden;
   transform: scale(1);
   transform-origin: top;
+  width: 100%;
+  height: auto;
+
 }
 
 .participant-info {
@@ -14,8 +17,9 @@
 }
 
 .GH {
-  background-color: darkseagreen;
+  /* background-color: darkseagreen; */
   justify-items: center;
+
 }
 
 .title {
