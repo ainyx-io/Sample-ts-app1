@@ -36,7 +36,7 @@ const TrainingParticipants: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="col-lg-12 GH" style={{minHeight: '20vh'}}>
+    <div className="col-lg-9 GH" style={{minHeight: '20vh'}}>
       <div className="z">
         <h6 className="title">Ready for Training</h6>
         <button className="Cbtn-primary" type="button">View All</button>

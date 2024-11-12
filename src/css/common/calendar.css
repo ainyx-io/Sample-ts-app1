@@ -1,156 +1,140 @@
-
-.schedule-calendar {
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  gap: 12px;
+/* Calendar Wrapper */
+.calendar-wrapper {
+  background-color:bisque;
+  /* padding: 20px; */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  justify-items: center;
   overflow: hidden;
   transform: scale(1);
-  transform-origin: top;
+  transform-origin:top;
 }
 
+/* Header */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-.Scard {
+.calendar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.calendar-btn {
+  background-color: #f3f4f6;
+  color: #333;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-btn:hover {
+  background-color: #e1e3e8;
+}
+
+/* Schedule Calendar Grid */
+.schedule-calendar .row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.schedule-card {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.schedule-card:hover {
+  transform: translateY(-4px);
+}
+
+.schedule-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #f0f4f8;
-  border-radius: 10px;
-  width:3.5vw;
-  height: 8.5vh;
-  overflow: hidden;
-  transform: scale(1);
-  transform-origin: top;
+}
+
+.schedule-day {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.schedule-date {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Media Queries for Responsiveness */
+ @media (max-width: 1200px) {
+  .schedule-calendar .row {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-
-
-
-   
-.w{
-  display:grid;
-  grid-template-columns:1fr 0.1fr;
-  margin-top:30px;
-  margin-left:10px;
-  padding-bottom:10px;
-}
-
-
-
-
-.w h6{
-  font-size: small;
-  font-weight:bold;
-  margin-left: -25vh;
-}
-
-
-
-
-.IJ1{
-  margin-bottom: 5vh;
-  background-color:burlywood;
-  }
-
-
-
-
-.Dbtn-primary{
-  /* margin-bottom:-16px; */
-  background-color:#3F6AD8;
-  width:77px;
-  color:white;
-  cursor: pointer;
-  font-size: x-small;
-  padding-top:-1px;
-  height:2.5vh;
-  border-radius:5px;
-  text-align: center;
-  border:none;
-   }
-
-
-/* Text styling inside each card */
-.Scard .day {
-  font-size:small;
-  font-weight: bold;
-}
-
-
-
-
-.Scard .number {
-  font-size: 10px;
-  margin-top: 5px; /* Space between day and number */
-}
-
-
-
-
-/* If you want all cards to take equal width dynamically */
- .schedule-calendar .card {
-  flex: 1;
-  margin:1px; /* Space between the cards */
- }
-
-
-
-
-/* Base styles for images inside .Scard */
-.Scard img {
-  width: 100%; /* Ensures images take up the full width of their container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Prevent the image from stretching beyond its container */
-}
-
-/* Media Queries */
-
-/* Small screens (Mobile devices) */
-@media screen and (max-width: 480px) {
-  .Scard img {
-    width: 100%; /* Image takes up full width on smaller screens */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .Scard{
-    width: 100%;
-    height: auto;
+  .schedule-card {
+    flex: 1 0 22%;
   }
 }
 
-/* Tablets (Landscape and Portrait) */
-@media screen and (max-width: 768px) {
-  .Scard img {
-    width: 100%; /* Image takes up full width on tablets */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .Scard{
-    width: 100%;
-    height: auto;
+@media (max-width: 992px) {
+  .schedule-card {
+    flex: 1 0 30%;
   }
 }
 
-/* For small desktop or large tablets */
-@media screen and (max-width: 1024px) {
-  .Scard img {
-    width: 100%; /* Image will be 100% width of the card */
-    height: auto; /* Maintain aspect ratio */
+@media (max-width: 768px) {
+  .calendar-wrapper {
+    padding: 15px;
   }
-  .Scard{
-    width: 100%;
-    height: auto;
+
+  .calendar-title {
+    font-size: 16px;
+  }
+
+  .calendar-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .schedule-card {
+    flex: 1 0 48%;
+    padding: 10px;
+  }
+
+  .schedule-day {
+    font-size: 12px;
+  }
+
+  .schedule-date {
+    font-size: 18px;
   }
 }
 
-/* Large Screens (Desktops) */
-@media screen and (min-width: 1200px) {
-  .Scard img {
-    width: 100%; /* Images will take the full width of the card on large screens */
-    height: auto; /* Maintain aspect ratio */
+@media (max-width: 576px) {
+  .schedule-card {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
   }
-  .Scard{
-    width: 100%;
-    height: auto;
+
+  .schedule-day {
+    font-size: 11px;
   }
-}
+
+  .schedule-date {
+    font-size: 16px;
+  }
+} 

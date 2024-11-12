@@ -32,10 +32,28 @@
   border-radius: 8px;
 }
 
+/* .sidebarK{
+  width:250px;
+} */
 
+.middlem{
+  display: flex;
+  flex-direction:column;
+}
+
+.rightm{
+  display: flex;
+  flex-direction:column;
+    width: 250px;
+    position: relative;
+}
+
+.middleone{
+  margin-bottom:1vh;
+}
 
  .bottomone{
-  margin-top:-10vh;
+  margin-top:-8vh;
 } 
 
 .rightm1{
@@ -43,18 +61,17 @@
 }
 
 .rightm2{
-  margin-top: 7vh;
+  margin-top: 9vh;
   margin-left:-10vh;
 }
 
 .rightm3{
  margin-left: 17vh;
- margin-top:-12vh;
-margin-bottom: 0.5vh;
+ margin-bottom: 0.5vh;
 }
 
 .rightm4{
-  margin-left:-12vh;
+ margin-left:1vh;
 }
 
 /* Flexbox layout for columns */
@@ -112,4 +129,5 @@ margin-bottom: 0.5vh;
     min-height: auto;
   }
 }
+
 

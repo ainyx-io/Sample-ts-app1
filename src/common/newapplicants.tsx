@@ -42,7 +42,7 @@ const NewApplicants: React.FC = () => {
       <h6 className="title">New Applicants</h6>
       <button className="view-all-btn" type="button">View All</button>
     </div>
-    <div className='col-lg-10 new-applicants'>
+    <div className='col-lg-11 new-applicants'>
       <div className="applicants-list">
         {applicants.map((applicant) => (
               <div key={applicant.id} className="applicant-card" style={{minHeight: '6vh',minWidth:'20vw'}}>

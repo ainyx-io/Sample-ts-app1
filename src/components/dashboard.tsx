@@ -45,7 +45,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
               profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
             />
           </div>
-          <div className='rightm2' style={{ minHeight: '30vh' }}>
+          <div className='rightm2' style={{ minHeight: '22vh' }} >
             <Calendar />
           </div>
           <div className='rightm3' style={{ minHeight: '30vh' }}>

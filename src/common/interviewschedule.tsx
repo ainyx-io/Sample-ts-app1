@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/common/interviewschedule.css';
 
+
 const InterviewSchedule: React.FC = () => {
     return (
         <div className="interview-schedule-card">
@@ -9,7 +10,7 @@ const InterviewSchedule: React.FC = () => {
             <div className='data'>
             <ul>
                 <li>
-                <span className="bullet bullet-a"></span><strong>Resume Review</strong> 
+                <span className="bullet bullet-a"></span><strong>Resume Review</strong>
                     <p>Completed</p>
                 </li>
                 <li>
@@ -37,8 +38,9 @@ const InterviewSchedule: React.FC = () => {
            
             </div>
             </div>
-      
+     
     );
 }
+
 
 export default InterviewSchedule;

@@ -11,6 +11,7 @@
   background-color: yellow;
   height: auto; /* Ensure the height adjusts according to content */
   margin-left:2.5rem;
+  overflow: hidden;
 }
 
 .header2h .v{

@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ logoutUser }) => {
 
 
   return (
-    <div className="col-lg-1 sidebarm1">
+    <div className="sidebarm1">
       <h2 className="sidebar-title">
         <img src="/images/logo.png" alt="Logo" />
         Hireism

@@ -1,127 +1,187 @@
 .training-participants {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    overflow: hidden;
-    transform: scale(1);
-    transform-origin: top;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top;
+}
+
+.participant-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+}
+
+.GH {
+  background-color: darkseagreen;
+  justify-items: center;
+}
+
+.title {
+  font-size: small;
+  font-weight: bold;
+  transform: scale(1);
+}
+
+.Cbtn-primary {
+  background-color: #3F6AD8;
+  width: 77px;
+  color: white;
+  cursor: pointer;
+  font-size: x-small;
+  height: 3vh;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  margin-top: -1px;
+  margin-left: -3rem;
+  transform: scale(1);
+}
+
+.z {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  margin-top: 30px;
+  margin-left: 14px;
+}
+
+.z .title {
+  margin-top: 10px;
+}
+
+.participants-list {
+  gap: 10px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+  transform: scale(1);
+}
+
+.participant-card {
+  border-radius: 8px;
+  background-color: #eaeaea;
+  text-align: center;
+  margin-top: -5px;
+  transform: scale(1);
+}
+
+.participant-card .EF {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.participant-card .participant-job {
+  font-size: xx-small;
+}
+
+.participant-card:hover {
+  background-color: #eaeaea;
+}
+
+.participant-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.participant-card .participant-name {
+  font-size: x-small;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.start-training-btn {
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: 2.5vh;
+  width: 70px;
+  margin-left: 10px;
+}
+
+.start-training-btn h6 {
+  font-size: 8px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Medium Devices */
+@media (max-width: 992px) {
+  .GH {
+      padding: 15px;
   }
-  
-  .participant-info {
-    display: flex;
-    flex-direction: row;
-    gap: 1vh;
+  .z {
+      grid-template-columns: 1fr;
+      text-align: center;
   }
-  
-  .GH{
-    background-color: darkseagreen;
-    justify-items: center;
-  }
-  
-  
   .title {
-    font-size: small;
-    font-weight:bold;
-    transform: scale(1);
-   }
-
-  .Cbtn-primary{
-    /* margin-bottom:-16px; */
-    background-color:#3F6AD8;
-    width:77px;
-    color:white;
-    cursor: pointer;
-    font-size: x-small;
-    padding-top:-1px;
-    height:3vh;
-    border-radius:5px;
-    text-align: center;
-    border:none;
-    margin-top:-1px;
-    margin-left:-3rem;
-    transform: scale(1);
+      font-size: 14px;
   }
-  
-  
-  .z{
-    display:grid;
-    grid-template-columns:1fr 0.2fr;
-    margin-top:30px;
-    margin-left:14px;
+  .Cbtn-primary {
+      width: 60px;
+      font-size: xx-small;
+      margin-left: 0;
   }
-  
-  
-  .z .title{
-    margin-top:10px;
-  }
-  
-  
   .participants-list {
-    gap: 10px;
-   margin-left:8px;
-
-    display: flex;
-    flex-direction: row;
-    gap: 1vh;
-    transform: scale(1);
-   }
-  
-  
+      flex-direction: row;
+      gap: 5px;
+      justify-content: center;
+  }
   .participant-card {
-     border-radius: 8px;
-    background-color: #eaeaea;
-    text-align: center;
-    margin-top:-5px;
-    transform: scale(1);
-    }
-  
-  
-  .participant-card .EF{
-    display: inline;
-    display:flex;
-    flex-direction: column;
+      width: 45%;
   }
-  
-  
-  .participant-card .participant-job{
-    font-size:xx-small;
+  .participant-name {
+      font-size: 13px;
   }
-  
-  
-  .participant-card:hover {
-    background-color: #eaeaea;
+  .participant-job {
+      font-size: 10px;
   }
-  
-  
-  .participant-img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    align-items: center;
-    margin-top:4px;
-  }
-  
-  
-  .participant-card .participant-name {
-    font-size:x-small;
-    font-weight:bolder;
-    text-align: center;
-   }
-  
-  
   .start-training-btn {
-    background-color:cornflowerblue;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    height: 2.5vh;
-    width:70px;
-    margin-left:10px;
+      width: 60px;
+      font-size: 10px;
   }
+}
 
-  .start-training-btn h6{
-    font-size:8px;
+/* Mobile Devices */
+@media (max-width: 576px) {
+  .GH {
+      padding: 10px;
   }
-  
-  
-  
+  .z {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+  .Cbtn-primary {
+      width: 100%;
+      margin-top: 5px;
+  }
+  .participants-list {
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+  }
+  .participant-card {
+      width: 90%;
+      margin-bottom: 8px;
+  }
+  .participant-img {
+      width: 40px;
+      height: 40px;
+  }
+  .participant-name {
+      font-size: 12px;
+  }
+  .participant-job {
+      font-size: 10px;
+  }
+  .start-training-btn {
+      width: 100%;
+      font-size: 10px;
+      margin-left: 0;
+  }
+}

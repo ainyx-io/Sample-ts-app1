@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/common/profilestatus.css';
 
+
 const ProfileStatus: React.FC = () => {
   return (
     <div className="profile-status-card">
@@ -20,5 +21,6 @@ const ProfileStatus: React.FC = () => {
     </div>
   );
 };
+
 
 export default ProfileStatus;
