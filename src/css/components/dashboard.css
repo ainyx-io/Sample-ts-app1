@@ -39,6 +39,7 @@
 .middlem{
   display: flex;
   flex-direction:column;
+  background-color: aqua;
 }
 
 .rightm{
@@ -56,21 +57,24 @@
   margin-top:-8vh;
 } 
 
-.rightm1{
-  margin-left:-10vh;
-}
+/* .rightm1{
+  margin-right:-30vh;
+  position: fixed;
+  margin-top:-30vh;
+} */
 
 .rightm2{
-  margin-top: 9vh;
+  margin-top: 1vh;
   margin-left:-10vh;
 }
 
 .rightm3{
  margin-left: 17vh;
- margin-bottom: 0.5vh;
+ margin-top:-3vh;
 }
 
 .rightm4{
+ margin-bottom:-7vh;
  margin-left:1vh;
 }
 

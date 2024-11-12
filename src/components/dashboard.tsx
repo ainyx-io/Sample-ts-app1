@@ -23,7 +23,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
             <Sidebar logoutUser={logoutUser} />
           </aside>
         </div>
-        <div className="col-lg-5 middlem">
+        <div className="col-lg-5 middlem" style={{ minHeight: '100vh'}} >
           <div className='col-lg-11 topone' style={{ minHeight: '30vh' }}>
             <Searchbar />
           </div>
@@ -37,14 +37,15 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           </div>
         </div>
 
-        <div className="col-lg-1 rightm">
-          <div className='rightm1'>
+
+        <div className="col-lg-1 rightm"  style={{ minHeight: '100vh'}}>
+         
             <UserProfile
               name="Sara Abraham"
               designation="View Profile"
               profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
             />
-          </div>
+         
           <div className='rightm2' style={{ minHeight: '22vh' }} >
             <Calendar />
           </div>

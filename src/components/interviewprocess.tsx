@@ -20,22 +20,20 @@ const InterviewProcess: React.FC<InterviewProcessProps> = ({ logoutUser }) => {
               <Sidebar logoutUser={logoutUser} />
             </aside>
           </div>
-          
 
-          <div className="col-lg-10 main-content1">
 
-            <div className=' col-lg-7 itopbar'>
-              <UserProfile
-                name="Sara Abraham"
-                designation="View Profile"
-                profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
-              />
-            </div>
+          <div className="col-lg-10 main-content1" style={{minHeight:"100vh"}}>
+
+            <UserProfile
+              name="Sara Abraham"
+              designation="View Profile"
+              profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
+            />
 
             <div className="content-sections1">
               <div className='nav-thing'>
                 {/* Navigation Tabs */}
-           <ul className="nav">
+                <ul className="nav">
                   <li className="nav-item1">
                     <a className="nav-link active" href="#">All Candidates</a>
                   </li>
@@ -46,9 +44,9 @@ const InterviewProcess: React.FC<InterviewProcessProps> = ({ logoutUser }) => {
                     <a className="nav-link" href="#">Completed</a>
                   </li>
                 </ul>
-              </div> 
+              </div>
 
-            <div className='table-thing'>
+              <div className='table-thing'>
                 <InterviewTable />
               </div>
 

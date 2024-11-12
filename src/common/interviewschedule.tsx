@@ -4,7 +4,7 @@ import '../css/common/interviewschedule.css';
 
 const InterviewSchedule: React.FC = () => {
     return (
-        <div className="interview-schedule-card">
+        <div className="col-lg-3 interview-schedule-card" style={{minHeight:"37vh", minWidth:"19vw"}}>
             <h4>Interview Schedule</h4>
             <div className='data-and-dates'>
             <div className='data'>

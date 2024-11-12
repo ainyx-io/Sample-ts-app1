@@ -4,7 +4,7 @@ import '../css/common/profilestatus.css';
 
 const ProfileStatus: React.FC = () => {
   return (
-    <div className="profile-status-card">
+    <div className="col-lg-3 profile-status-card" style={{minHeight:"37vh", minWidth:"19vw"}}>
       <h5>Profile Status</h5>
       <div className="concentric-circles">
         <div className="circle outer-circle">

@@ -39,7 +39,7 @@ const InterviewTable: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="col-lg-10 GH1" style={{minHeight:"70vh"}} >
+    <div className="col-lg-10 GH1" style={{minHeight:"75vh"}} >
       <div className="col-lg-11 interview-table" style={{minHeight:"65vh"}}>
         <table className="table table1">
           <thead>

@@ -14,45 +14,56 @@ interface CandidateProfileProps {
 }
 
 const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
-  
+
   return (
     <div className='whole2'>
-    <Card className='main-card3'>
-    <div className="app-layout2">
-      <aside className="sidebar2">
-        <Sidebar logoutUser={logoutUser} />
-      </aside>
-      <main className="main-content2">
-      <UserProfile
-        name="Sara Abraham" 
-        designation="View Profile" 
-        profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
-      />
-            
-        <div className="content-sections2">
-        <Row>
-        <Col md={4}>
-         <div className='a1'>
-           <Profiledata/>
+      <div className='row'>
+        <div className="app-layout2">
+
+          <div className='col-lg-2 sidebarm'>
+            <aside className="sidebarK">
+              <Sidebar logoutUser={logoutUser} />
+            </aside>
+          </div>
+
+          <div className="col-lg-10 main-content2">
+
+            <UserProfile
+              name="Sara Abraham"
+              designation="View Profile"
+              profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
+            />
+
+            <div className='col-lg-11 mbody' style={{minHeight:"85vh"}}>
+              <div className="col-lg-12 content-sections2"  style={{minHeight:"40vh"}}>
+                <Row>
+                <Col md={4}>
+                  <div className='a1'> 
+                    <Profiledata />
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className='b1'>
+                    <InterviewSchedule />
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className='c1'>
+                    <ProfileStatus />
+                  </div>
+                </Col>
+              </Row>
+              </div>
+
+              <div className='col-lg-12 mtable' style={{minHeight:"40vh"}}>
+              <PreviousExperience />
+              </div>
+            </div>
+          </div>
+
         </div>
-       </Col>
-     <Col md={4}>
-       <div className='b1'>
-         <InterviewSchedule />
-       </div>
-     </Col>
-     <Col md={4}>
-     <div className='c1'>
-         <ProfileStatus />
-     </div>
-     </Col>
-     </Row>
-     </div>
-          <PreviousExperience />
-      </main>
       </div>
-    </Card>
-      </div>
+    </div>
   );
 };
 

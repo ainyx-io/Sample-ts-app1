@@ -12,9 +12,7 @@
   padding: 20px;
 }
 
-.content-sections1 {
-  margin-top: 14vh;
-}
+
 
 .nav-thing {
   margin-left: 8vh;
@@ -71,10 +69,6 @@
     margin-right: 15px;
   }
 
-  .col-lg-7.itopbar {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 576px) {
@@ -95,7 +89,4 @@
     margin-bottom: 5px;
   }
 
-  .col-lg-7.itopbar {
-    justify-content: center;
-  }
 }

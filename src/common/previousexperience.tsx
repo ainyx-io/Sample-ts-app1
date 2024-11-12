@@ -41,14 +41,14 @@ const PreviousExperience: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="col-lg-12 GH" style={{ minHeight: '20vh' }}>
+    <div className="col-lg-12 GH2" style={{ minHeight: '20vh' }}>
       <div className="z">
         <h6 className="title">Previous Experience</h6>
         <button className="Cbtn-primary" type="button">
           View All
         </button>
       </div>
-      <div className="col-lg-11 experience-table">
+      <div className="col-lg-10 experience-table">
         <Table className="table table1">
           <thead>
             <tr>

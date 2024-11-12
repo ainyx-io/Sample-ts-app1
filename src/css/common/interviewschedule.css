@@ -3,8 +3,8 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  height:33.5vh;
-  width:14vw;
+  height:auto;
+  width:100%;
 }
 
 .interview-schedule-card h4 {

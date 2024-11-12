@@ -39,7 +39,7 @@ const ProfileData: React.FC = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="candidate-profile-card">
+    <div className="col-lg-3 candidate-profile-card"  style={{minHeight:"37vh", minWidth:"19vw"}} >
       {profiles.map((profile) => (
         <div key={profile.id} className="profile-card">
           <img src="/images/mike.png" alt={profile.full_name} className="circle-image" />

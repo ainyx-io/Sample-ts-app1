@@ -1,51 +1,19 @@
-.AA {
-    padding: 10px;
-    margin-top:-2rem;
-}
 
 .previous-experience-card{
     padding: 8px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width:44.5vw; 
-    margin-left:10px;
+    width:100%; 
+    height: auto;
+    margin-left:5rem;
 }
 
-.AA h4 {
-    font-size:medium;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-    margin-left:10px;
-
+.experience-table{
+    align-items: center;
+    margin-left: 10vh;
 }
 
-.table2 {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table2 th, .table2 td {
-    padding: 7px;
-    text-align: left;
-    font-size: 0.9em;
-}
-
-.table2 th {
-    background-color: #f8f9fa;
-    color: #333;
-    font-weight: bold;
-}
-
-.table2 tbody tr:nth-child(even) {
-    background-color: #f1f1f1;
-}
-
-.table2 tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-.table2 td {
-    color: #666;
+.z{
+    margin-left: 6vh; 
 }
