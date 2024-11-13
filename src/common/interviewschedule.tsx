@@ -10,19 +10,23 @@ const InterviewSchedule: React.FC = () => {
             <div className='data'>
             <ul>
                 <li>
-                <span className="bullet bullet-a"></span><strong>Resume Review</strong>
+                <span className="bullet bullet-a">
+                    <h6>Resume Review</h6></span>
                     <p>Completed</p>
                 </li>
                 <li>
-                    <strong><span className="bullet bullet-b"></span>Technical Task</strong>
+                   <span className="bullet bullet-b">
+                    <h6>Technical Task</h6></span>
                     <p>Completed -<span>Eligible for Next Round</span></p>
                 </li>
                 <li>
-                    <strong><span className="bullet bullet-c"></span>Technical Interview</strong>
+                    <span className="bullet bullet-c">
+                        <h6>Technical Interview</h6></span>
                      <p>Completed - <span>Eligible for Next Round</span></p>
                 </li>
                 <li>
-                    <strong><span className="bullet bullet-d"></span>HR Interview</strong>
+                    <span className="bullet bullet-d">
+                        <h6>HR Interview</h6></span>
                      <p>Waiting for Confirmation</p>
                 </li>
                 </ul>

@@ -57,12 +57,13 @@
 
 .middleone{
   margin-bottom:1vh;
-  margin-top:8vh;
+  margin-top:-4vh;
+  /* background-color: pink; */
 }
 
- .bottomone{
+ /* .bottomone{
   margin-top:-15vh;
-} 
+}  */
 
 /* .rightm1{
   margin-right:-30vh;

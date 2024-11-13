@@ -34,7 +34,7 @@ const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
               profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
             />
 
-            <div className='col-lg-11 mbody' style={{minHeight:"85vh"}}>
+            <div className='col-lg-11 mbody' style={{minHeight:"100vh"}}>
               <div className="col-lg-12 content-sections2"  style={{minHeight:"40vh"}}>
                 <Row>
                 <Col md={4}>

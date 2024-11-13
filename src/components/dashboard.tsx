@@ -23,6 +23,7 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
             <Sidebar logoutUser={logoutUser} />
           </aside>
         </div>
+       
         <div className="col-lg-5 middlem" style={{ minHeight: '100vh'}} >
           <div className='col-lg-11 topone' style={{ minHeight: '30vh' }}>
             <Searchbar />
@@ -59,11 +60,8 @@ const Dashboard: React.FC<DashboardProps> = ({ logoutUser }) => {
           </div>
         </div>
 
-
-
-
-
-      </div>
+        </div>
+   
     </div >
   );
 };

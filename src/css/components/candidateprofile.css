@@ -2,7 +2,7 @@
 .app-layout2 {
   display: flex;
   flex-direction: row;
-  height: 100vh; /* Full screen height */
+  minHeight: 100vh; /* Full screen height */
 }
 
 .main-content2 {
@@ -12,9 +12,9 @@
   background-color:#E5E5FB;
 }
 
-/* .mbody {
-  background-color: dimgray;
-} */
+.mbody {
+  background-color:#E5E5FB ;
+}
 
 .content-sections2 {
   /* background-color: cornflowerblue; */
@@ -24,7 +24,7 @@
   padding-top: 2vh;
   padding-bottom: 2vh;
   border-radius: 8px;
-  background-color:#E5E5FB;
+  
 }
 
 .a1, .b1, .c1 {

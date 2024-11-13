@@ -49,13 +49,14 @@
   display: flex;
   flex-direction: column;
   margin-left: -5.4rem;
-  padding-top: 0.4rem;
   transform: scale(1);
+  margin-top:15vh;
 }
 
 .t {
   display: grid;
   grid-template-columns: 1fr 0.1fr;
+  margin-bottom: -5vh;
 }
 
 /* .t .title {
@@ -143,7 +144,7 @@
   }
 
   .t {
-    display: block;
+    /* display: block; */
     margin-top: 10px;
     width: 100%;
   }
