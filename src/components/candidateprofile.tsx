@@ -1,0 +1,70 @@
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
+import '../css/components/candidateprofile.css';
+import Sidebar from '../common/leftsidebar';
+import Profiledata from '../common/profiledata';
+import InterviewSchedule from '../common/interviewschedule';
+import ProfileStatus from '../common/profilestatus';
+import PreviousExperience from '../common/previousexperience';
+import UserProfile from '../common/topbarprofile';
+
+
+interface CandidateProfileProps {
+  logoutUser: () => void;
+}
+
+const CandidateProfile: React.FC<CandidateProfileProps> = ({ logoutUser }) => {
+
+  return (
+    <div className='whole2'>
+      <div className='row'>
+        <div className="app-layout2">
+
+          <div className='col-lg-2 sidebarm'>
+            <aside className="sidebarK">
+              <Sidebar logoutUser={logoutUser} />
+            </aside>
+          </div>
+
+          <div className="col-lg-10 main-content2" style={{minHeight:"100vh"}}>
+
+            <UserProfile
+              name="Sara Abraham"
+              designation="View Profile"
+              profileImgUrl="https://via.placeholder.com/150" // Replace with actual image URL
+            />
+
+            <div className='col-lg-11 mbody' style={{minHeight:"100vh"}}>
+              <div className="col-lg-12 content-sections2"  style={{minHeight:"40vh"}}>
+                <Row>
+                <Col md={4}>
+                  <div className='a1'> 
+                    <Profiledata />
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className='b1'>
+                    <InterviewSchedule />
+                  </div>
+                </Col>
+                <Col md={4}>
+                  <div className='c1'>
+                    <ProfileStatus />
+                  </div>
+                </Col>
+              </Row>
+              </div>
+
+              <div className='col-lg-12 mtable' style={{minHeight:"40vh"}}>
+              <PreviousExperience />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CandidateProfile;

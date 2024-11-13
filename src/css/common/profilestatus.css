@@ -1,0 +1,64 @@
+.profile-status-card{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height:auto;
+  width:100%;
+}
+
+.profile-status-card h5 {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.concentric-circles {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.outer-circle {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #28a745;
+}
+
+.middle-circle {
+  width: 80%;
+  height: 80%;
+  border: 4px solid #007bff;
+  top: 10%;
+  left: 10%;
+}
+
+.inner-circle {
+  width: 60%;
+  height: 60%;
+  border: 4px solid #ffc107;
+  top: 20%;
+  left: 20%;
+}
+
+.circle-labels {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle-label p {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.bullet-e { background-color: #28a745; }
+.bullet-f { background-color: #007bff; }
+.bullet-g { background-color: #ffc107; }

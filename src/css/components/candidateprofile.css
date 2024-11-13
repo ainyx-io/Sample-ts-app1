@@ -1,0 +1,160 @@
+/* General Layout */
+.app-layout2 {
+  display: flex;
+  flex-direction: row;
+  minHeight: 100vh; /* Full screen height */
+}
+
+.main-content2 {
+  /* background-color: blanchedalmond; */
+  padding: 20px;
+  flex-grow: 1; /* Ensure the content takes up remaining space */
+  background-color:#E5E5FB;
+}
+
+.mbody {
+  background-color:#E5E5FB ;
+}
+
+.content-sections2 {
+  /* background-color: cornflowerblue; */
+  margin-bottom: 1vh;
+  align-items: center;
+  justify-items: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-radius: 8px;
+  
+}
+
+.a1, .b1, .c1 {
+  margin-right: 4vh;
+}
+
+.mtable {
+  /* background-color: indianred; */
+  margin-top: 20px;
+}
+
+/* Responsive styles for different breakpoints */
+
+/* When the screen width is 1200px or smaller */
+@media (max-width: 1200px) {
+  .app-layout2 {
+    flex-direction: column; /* Stack layout vertically */
+  }
+
+  .sidebarm {
+    width: 100%; /* Sidebar takes full width */
+    height: auto;
+  }
+
+  .main-content2 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content-sections2 {
+    margin-bottom: 20px; /* Add more margin between sections */
+  }
+
+  .a1, .b1, .c1 {
+    margin-right: -10vh; /* Reduce margin between columns */
+    width: 100%;
+  }
+  
+  .mbody {
+    margin-top: 20px;
+  }
+
+  .mtable {
+    margin-top: 20px;
+  }
+}
+
+/* When the screen width is 768px or smaller */
+@media (max-width: 768px) {
+  .app-layout2 {
+    flex-direction: column; /* Stack layout vertically */
+  }
+
+  .sidebarm {
+    width: 100%; /* Sidebar takes full width */
+    margin-bottom: 20px;
+  }
+
+  .main-content2 {
+    padding: 10px;
+  }
+
+  .content-sections2 {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Stack the columns inside .content-sections2 */
+  .a1, .b1, .c1 {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between columns when stacked */
+    width: 100%; /* Ensure they take full width */
+  }
+
+  /* Adjust margins for other sections */
+  .mbody {
+    margin-top: 15px;
+  }
+
+  .mtable {
+    margin-top: 20px;
+  }
+}
+
+/* When the screen width is 576px or smaller (Mobile devices) */
+@media (max-width: 576px) {
+  .app-layout2 {
+    flex-direction: column; /* Stack layout vertically */
+  }
+
+  .sidebarm {
+    width: 100%; /* Sidebar takes full width */
+    margin-bottom: 20px;
+  }
+
+  .main-content2 {
+    padding: 10px;
+  }
+
+  .content-sections2 {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Stack the columns inside .content-sections2 */
+  .a1, .b1, .c1 {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between columns when stacked */
+    width: 100%; /* Ensure they take full width */
+  }
+
+  .mbody {
+    margin-top: 15px;
+  }
+
+  .mtable {
+    margin-top: 20px;
+  }
+
+  /* Adjust fonts, padding, and margins for mobile screens */
+  .content-sections2 {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .a1, .b1, .c1 {
+    width: 100%; /* Ensure columns take full width */
+  }
+
+  .mtable {
+    font-size: 0.8rem; /* Adjust font size for mobile screens */
+  }
+}

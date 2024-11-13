@@ -1,22 +1,53 @@
-import React from 'react'
-import './css/App.css'
-import Login from './components/Login Page.tsx/login.tsx'
-import Home from './components/Home Page.tsx/Header1.tsx'
-import InterviewProcess from './components/Interview Process Page.tsx/InterviewProcess.tsx'
-import Candidateprofile from './components/Profile Page.tsx/Main Profile.tsx'
-import Sidebar from './components/Login Page.tsx/left sidebar.tsx'
-import UserProfile from './components/Login Page.tsx/topbarprofile.tsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LoginPage from './components/login';
+import Dashboard from './components/dashboard';
+import InterviewProcess from './components/interviewprocess';
+import CandidateProfile from './components/candidateprofile';
+import Sidebar from './common/leftsidebar';
+import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
-const App = () => {
-  return (
-    <div>
-      <Home/>
-      <Login/>
-      <InterviewProcess/>
-      <Candidateprofile/>
-     </div>
-  );
+// Redirect component
+const RedirectToDashboard = () => {
+  return <Navigate to="/Dashboard" replace />;
 };
 
+function App() {
+  const getToken = () => {
+    const tokenString = sessionStorage.getItem('token');
+    const userToken = tokenString ? JSON.parse(tokenString) : null;
+    return userToken;
+  };
+
+  const [token, setTokenState] = useState(getToken());
+
+  const setToken = (userToken) => {
+    sessionStorage.setItem('token', JSON.stringify(userToken));
+    setTokenState(userToken);
+  };
+
+  const logoutUser = () => {
+    setToken(null);
+    sessionStorage.removeItem('token');
+  };
+
+  if (!token) {
+    return <LoginPage setToken={setToken} />;
+  }
+
+  return (
+    <div className='wrapper'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Login" element={<LoginPage setToken={setToken} />} />
+          <Route path="/" element={<RedirectToDashboard />} />
+          <Route path="/Dashboard" element={<Dashboard logoutUser={logoutUser} />} />
+          <Route path="/InterviewProcess" element={<InterviewProcess />} />
+          <Route path="/CandidateProfile" element={<CandidateProfile />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
 
 export default App;

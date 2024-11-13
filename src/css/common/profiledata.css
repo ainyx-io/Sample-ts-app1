@@ -1,0 +1,43 @@
+.candidate-profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height:auto;
+    width:100%;
+}
+
+.candidate-profile-card img.circle-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.candidate-profile-card h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.candidate-profile-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 2px 0;
+}
+
+.things-sidebyside {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.one-thing p, .second-thing p {
+    margin: 3px 0;
+    font-size: 0.9em;
+}

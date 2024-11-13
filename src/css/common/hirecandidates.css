@@ -1,0 +1,230 @@
+.hire-candidates {
+  padding: 15px;
+  /* background-color: aquamarine; */
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+  margin-left:7.7rem;
+  height: auto;
+  justify-content: space-between;
+  margin-top: -17vh;
+  transform:scale(1);
+  transform-origin:top;
+  }
+
+.t {
+  margin-top: 10vh;
+
+}
+
+.candidates-list {
+  display:flex;
+  flex-direction: row;
+  padding: 15px;
+  background-color: #e6ebfb;
+  border-radius: 10px;
+  gap: 10px;
+  transform: scale(1);
+  transform-origin: top;
+  margin-top: 3vh;
+  align-items: center;
+  justify-content: space-between; /* This will ensure proper alignment between items */
+  height: auto;
+} 
+
+.candidate-card {
+  /* padding-right: 3px; */
+  height:auto;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 169px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+}
+
+/* Container Styles */
+.IJ {
+  display: flex;
+  flex-direction: column;
+  margin-left: -5.4rem;
+  transform: scale(1);
+  margin-top:15vh;
+}
+
+.t {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  margin-bottom: -5vh;
+}
+
+/* .t .title {
+  font-size: small;
+  font-weight: bold;
+  color: #333;
+  transform: scale(1);
+  overflow: hidden;
+  transform-origin: top left;
+ } */
+
+/* Candidate Icon */
+.candidate-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top;
+}
+
+.candidate-details {
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top;
+}
+
+.candidate-details h5 {
+  font-size: x-small;
+}
+
+.candidate-details h6 {
+  font-size: xx-small;
+}
+
+.candidate-role {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.candidate-count {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* View All Button */
+.Fbtn-primary {
+  margin-bottom: 20px;
+  background-color: #3f6ad8;
+    color: white;
+  cursor: pointer;
+  font-size: x-small;
+  height: 2.8vh;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  margin-top: -20vh;
+  transform: scale(1);
+  overflow: hidden;
+  transform-origin: top left;
+}
+
+
+
+.t h6{
+  margin-top: -20vh;
+  margin-left:-10vh;
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 576px) {
+  /* Update the layout for the header and main content */
+  .IJ {
+
+    margin-left:2rem;
+  }
+
+  .hire-candidates {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px;
+    background-color: aquamarine;
+  }
+
+  .t {
+    /* display: block; */
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .candidates-list {
+    flex-direction: column; /* Stack the cards vertically on small screens */
+    gap: 15px;
+ 
+  }
+
+  .candidate-card {
+    width: 100%; /* Make candidate cards take full width on small screens */
+    height: auto;
+   }
+
+  /* .Fbtn-primary {
+    width: 100%; /* Make the button full width */
+    /* font-size: small;
+  } */ */
+
+  .candidate-details h5 {
+    font-size: small;
+  }
+
+  .candidate-details h6 {
+    font-size: small;
+  }
+}
+
+/* Tablet Screens (Medium Devices) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .hire-candidates {
+    padding: 15px;
+
+  }
+    .IJ {
+     
+      padding: 15px; 
+       margin-left:8.5rem;
+    }
+  
+
+  .t {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .candidates-list {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .candidate-card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* .Fbtn-primary {
+    width: 100%;
+    font-size: small;
+  } */
+}
+
+/* Desktop Screens (Large Devices) */
+@media (min-width: 993px) {
+  .candidates-list {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .candidate-card {
+    width: 100%; /* Set the original width on desktop */
+    height: auto;
+  }
+
+  /* .Fbtn-primary {
+    width: 100%;
+    font-size: small;
+  } */
+}
+
+  
+  

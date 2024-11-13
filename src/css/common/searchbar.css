@@ -1,0 +1,254 @@
+/* Base Styles for .header2h */
+.header2h {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: -2rem;
+  transform: scale(1);
+  transform-origin: top;
+  /* background-color: yellow; */
+  height: auto; /* Ensure the height adjusts according to content */
+  margin-left:2.5rem;
+  overflow: hidden;
+}
+
+.header2h .v{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax( 1fr 1fr));
+  width:100%;
+  height:auto;
+}
+
+.b .img-fluid{
+  width:100%;
+  height:100px;
+  object-fit: cover;
+  object-position:bottom;
+}
+
+/* Button Styles */
+.btn-outline-secondary {
+  width: 100%; /* Full width for smaller screens */
+  border: none;
+  font-size: small;
+  color: grey;
+  height: 3.5vh;
+  background-color: white;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.Ebtn-primary {
+  background-color: #3F6AD8;
+  width:100%; /* Full width for smaller screens */
+  color: white;
+  font-size: small;
+  padding-top: -1px;
+  height: 3.5vh;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  }
+
+.greeting {
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: #3F6AD8;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax( 1fr 1fr));
+  margin-top:-1rem;
+}
+
+.btn-success {
+  background-color: white;
+  width: 100px;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  font-size: x-small;
+  height: 3.4vh;
+  cursor: pointer;
+}
+
+.a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;  /* Controls the spacing between lines */
+  width: 100%;  /* Full width of the container */
+  padding-left:20px;
+}
+
+.a h4 {
+   color: white;
+  font-size:clamp(8px,1vw,32px);
+ } 
+
+.a p {
+  color: white;
+  font-size:clamp(15px,0.5vw,32px);
+  margin-top: -8px;
+  padding-top: 5px;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+/* Add New Button */
+.add-new-btn {
+  background-color: #3F6AD8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+
+/* Mobile (Small Screens) */
+@media (max-width: 576px) {
+  .header2h {
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  /* Adjust the grid layout for search box and add new button */
+  .header2h .v {
+    display: block;
+    width: 100%;
+  }
+
+  .col-lg-3 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust greeting section layout */
+  .greeting {
+    display: block;
+    padding: 10px;
+  }
+
+  /* .greeting .a {
+    align-items: center;
+  } */
+
+  .btn-success {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  /* Adjust font sizes */
+  /* .a h4 {
+    font-size: 1.5rem;
+  }
+
+  .a p {
+    font-size: 0.8rem;
+  } */
+
+  .b .img-fluid{
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-outline-secondary {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .Ebtn-primary {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* Tablet Screens (Medium Devices) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .header2h {
+    padding: 15px;
+    margin-left:13rem;
+  }
+
+
+  .greeting {
+    padding: 15px;
+  }
+
+  /* .a h4 {
+    font-size: 1.5rem;
+  }
+
+  .a p {
+    font-size: 0.9rem;
+  } */
+
+  .btn-success {
+    width: 85px;
+    font-size: x-small;
+  }
+
+  .b .img-fluid{
+    width: 90%;
+    height: auto;
+  }
+
+  .btn-outline-secondary {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .Ebtn-primary {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* Desktop Screens (Large Devices) */
+@media (min-width: 993px) {
+  .header2h {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header2h .v {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .greeting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* .a h4 {
+    font-size: 1.8rem;
+  }
+
+  .a p {
+    font-size: 1rem;
+  } */
+
+  .btn-outline-secondary {
+    width: 300px;
+    font-size: small;
+  }
+
+  .Ebtn-primary {
+    width: 200px;
+    font-size: x-small;
+  }
+
+  .b .img-fluid{
+    width: 80%;
+    height: auto;
+  }
+}

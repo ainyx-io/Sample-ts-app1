@@ -1,0 +1,55 @@
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.container-fluid .row{
+  width: 100%;
+  height:auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+}
+
+/* Grid layout adjustments for responsiveness */
+
+
+/* Styling for form section and image section */
+.form-section,
+.bg-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .container-fluid {
+      grid-template-columns: 1fr; /* Single column for medium screens */
+  }
+  .container-fluid .row {
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+      grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
+}
+
+@media (max-width: 576px) {
+  .form-section h1,
+  .form-section h3 {
+      font-size: 1.5rem; /* Adjust heading size on very small screens */
+  }
+}

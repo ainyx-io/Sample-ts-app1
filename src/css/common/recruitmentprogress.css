@@ -1,0 +1,88 @@
+.recruitment-progress {
+  padding: 1px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 1vh;
+  height: auto;
+  width:100%;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin:top;
+}
+
+.CD {
+  /* margin-top: -7vh; */
+  /* background-color: bisque; */
+  margin-left: 4vh;
+  padding: 10px;
+  border-radius: 10px;
+  transform:scale(1);
+}
+
+.CD h3 {
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.x .title {
+  font-size: medium;
+  font-weight: bold;
+  text-align: left;
+  }
+
+
+.progress-table th,
+.progress-table td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.progress-table th {
+  color: gray;
+  font-weight: normal;
+}
+
+.progress-table td {
+  font-weight: bold;
+  color: black;
+}
+
+.progress-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.status-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.Abtn-primary {
+  background-color: #3F6AD8;
+  /* width: auto; */
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+  font-size: small;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  margin-right: -50vh;
+  margin-top:-25vh;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .CD {
+      padding-top: 1rem;
+      padding: 20px; 
+       margin-left:14rem;
+       min-width:550px;
+    }
+}
+

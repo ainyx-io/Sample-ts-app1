@@ -1,0 +1,58 @@
+.interview-schedule-card{
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height:auto;
+  width:100%;
+}
+
+.interview-schedule-card h6 {
+  font-size:x-small;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.data-and-dates {
+  display: flex;
+  flex-direction:row;
+}
+
+.data ul, .dates ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.data ul li p{
+  font-size:x-small;
+}
+
+.dates ul li {
+  font-size: x-small;
+  padding-bottom:3px;
+}
+
+.data li, .dates li {
+  margin-bottom: 10px;
+}
+
+.data .bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.bullet-a { background-color: #28a745; }
+.bullet-b { background-color: #007bff; }
+.bullet-c { background-color: #ffc107; }
+.bullet-d { background-color: #dc3545; }
+
+.dates p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+

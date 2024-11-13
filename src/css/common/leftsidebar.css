@@ -1,0 +1,157 @@
+.sidebar-menu{
+  list-style:none;
+}
+
+/* General styling for sidebar */
+.sidebarm1{
+  width: 250px;
+  height:100vh;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease; /* Smooth slide effect */
+  z-index: 1000;
+}
+
+.col-lg-1 .sidebarm1{
+  width: 250px;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3F6AD8;
+}
+
+.sidebar-title img {
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-part {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar-item1,
+.sidebar-item2,
+.sidebar-item3,
+.sidebar-item4,
+.sidebar-item5,
+.sidebar-item6,
+.sidebar-item7 {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item1:hover,
+.sidebar-item2:hover,
+.sidebar-item3:hover,
+.sidebar-item4:hover,
+.sidebar-item5:hover,
+.sidebar-item6:hover,
+.sidebar-item7:hover {
+  background-color: #e0e7ff; /* Light blue on hover */
+}
+
+.sidebar-icon1,
+.sidebar-icon2,
+.sidebar-icon3,
+.sidebar-icon4,
+.sidebar-icon5,
+.sidebar-icon6,
+.sidebar-icon7 {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.logout {
+  margin-top: auto;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F9FA;
+}
+
+.logout .btn {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #3F6AD8;
+}
+
+/* Responsive styling */
+@media (max-width: 992px) {
+  .sidebarm {
+    width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+  .sidebarm1{
+    width: 200px;
+  }
+
+  /* To display the sidebar, add the class 'sidebar-active' */
+  .sidebarm1.sidebar-active {
+    transform: translateX(0); /* Slide in sidebar */
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebarm1 {
+    width: 100%; /* Full-width sidebar on very small screens */
+    height: auto;
+    position: static;
+    padding-top: 0.5rem;
+  }
+
+  .sidebar-title {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-item1,
+  .sidebar-item2,
+  .sidebar-item3,
+  .sidebar-item4,
+  .sidebar-item5,
+  .sidebar-item6,
+  .sidebar-item7 {
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .logout {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .logout .btn {
+    font-size: 0.9rem;
+  }
+}

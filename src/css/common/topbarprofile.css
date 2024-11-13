@@ -1,0 +1,160 @@
+/* General Topbar Styles */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
+  margin-right:-28vh;
+  margin-top:-3vh;
+  margin-bottom: 10vh;
+}
+
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  position:fixed;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  /* background-color: cadetblue; */
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.settings-icon, .notification-icon {
+  font-size: 20px;
+  color: #555;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-details {
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.user-designation {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* Media Query for Tablet and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 5px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-right-icons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adds space between the icons and user profile */
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue; /* Background color for the profile container */
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .user-name {
+    font-size: 1.1em;
+  }
+
+  .user-designation {
+    font-size: 0.8em;
+  }
+
+  .profile-img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .top-bar {
+    padding: 5px 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-right-icons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adds space between the icons and user profile */
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .user-name {
+    font-size: 1em;
+  }
+
+  .user-designation {
+    font-size: 0.7em;
+  }
+
+  .profile-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icons {
+    margin-right: 5px;
+  }
+
+  .settings-icon, .notification-icon {
+    font-size: 16px; /* Reduced icon size for small screens */
+  }
+}

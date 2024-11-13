@@ -1,0 +1,151 @@
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container and row styling */
+.container1 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  overflow-y: hidden; /* Hides vertical overflow */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.threethings{
+  /* background-color: palevioletred; */
+  margin-bottom:-8vh;
+}
+
+/* Column styling */
+.sidebarm,
+.middlem,
+.rightm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+/* .sidebarK{
+  width:250px;
+} */
+
+.middlem{
+  display: flex;
+  flex-direction:column;
+  /* background-color: aqua; */
+  background-color:#E5E5FB;
+}
+
+.rightm{
+  display: flex;
+  flex-direction:column;
+    width: 250px;
+    position: relative;
+}
+
+.middleone{
+  margin-bottom:1vh;
+  margin-top:-4vh;
+  /* background-color: pink; */
+}
+
+ /* .bottomone{
+  margin-top:-15vh;
+}  */
+
+/* .rightm1{
+  margin-right:-30vh;
+  position: fixed;
+  margin-top:-30vh;
+} */
+
+.topone,.middleone,.bottomone{
+  padding-bottom:10px;
+}
+
+.rightm1,.rightm2,.rightm3,.rightm4{
+  padding-bottom:10px;
+}
+
+.rightm2{
+  margin-top: 1vh;
+}
+
+.rightm3{
+ margin-top:-3vh;
+}
+
+.rightm4{
+ margin-bottom:-7vh;
+ margin-left:1vh;
+}
+
+/* Flexbox layout for columns */
+.sidebarm{
+  background-color:white;
+  flex: 1 1 15%; /* Sidebar takes about 15% of the width */
+}
+
+.middlem{
+  flex: 1 1 50%; /* Middle column takes about 50% of the width */
+  flex-direction: column;
+}
+
+.rightm{
+  flex: 1 1 25%; /* Right column takes about 25% of the width */
+  background-color:white;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .row {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .sidebarm, .middlem, .rightm{
+      flex: 1 1 100%; /* Full-width columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.8rem; /* Adjust heading size for medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+      font-size: 1.5rem; /* Adjust heading size for small screens */
+  }
+
+  .sidebarm, .middlem, .rightm{
+      padding: 15px;
+      border-radius: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .topone, .middleone, .bottomone {
+    min-height: auto;
+  }
+
+  .rightm1{
+    min-height: auto;
+  }
+}
+
+
